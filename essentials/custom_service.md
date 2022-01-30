@@ -27,7 +27,7 @@ Restart=always
 WantedBy=default.target
 ```
 
---- La directive **WantedBy** représente la cible qui va gérer le service : la cible default.target .
+--- La directive **WantedBy** représente la cible qui va gérer le service : la cible default.target .<br>
 --- Le type forking signifie que le processus démarré avec ExecStart génère un processus enfant qui devient le processus principal du service. Le processus parent se termine lorsque le démarrage est terminé.
 
 **- Recharger la configuration du gestionnaire systemd**
