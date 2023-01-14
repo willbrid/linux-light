@@ -32,19 +32,19 @@ sudo yum list installed
 sudo yum list installed | grep httpd
 ```
 
---- mettre à jour tous les packages du système
+- mettre à jour tous les packages du système
 
 ```
 sudo yum update
 ```
 
---- mettre à jour le package d'apache
+- mettre à jour le package d'apache
 
 ```
 sudo yum update httpd
 ```
 
---- désinstaller le package d'apache
+- désinstaller le package d'apache
 
 ```
 sudo yum remove httpd -y
@@ -80,7 +80,7 @@ sudo apt-cache search apache | head
 sudo apt install apache2
 ```
 
---- désinstaller le package d'apache
+- désinstaller le package d'apache
 
 ```
 sudo apt remove apache2
