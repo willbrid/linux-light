@@ -2,7 +2,7 @@
 
 ## Les page de manuel
 
-Ce sont la principale source de documentation Linux (**man pages** en abrégé). Elles fournissent des informations sur les programmes, les utilitaires, les fichiers de configuration,... Les pages de manuel sont divisées en chapitres/sections, classés de 1 à 9.
+Ce sont la principale source de documentation Linux (**man pages** en abrégé). Elles fournissent des informations sur les programmes, les utilitaires, les fichiers de configuration,... Les pages de manuel sont divisées en 9 chapitres/sections, classés de 1 à 9.
 
 ```
 man [options] topic
