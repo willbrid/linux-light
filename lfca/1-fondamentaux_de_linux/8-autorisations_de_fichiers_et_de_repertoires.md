@@ -2,11 +2,11 @@
 
 ## Définition
 
-- **chown** : changer le propriétaire du fichier et le groupe. L'option -R peut être utilisée pour modifier les fichiers et les répertoires de manière récursive.
+- **chown** : change le propriétaire du fichier et le groupe. L'option -R peut être utilisée pour modifier les fichiers et les répertoires de manière récursive.
 
 - **chgrp** : change le groupe propriétaire.
 
-- **chmod** : modifier les autorisations d'un fichier. Le format peut être : <br>
+- **chmod** : modifie les autorisations d'un fichier. Le format peut être : <br>
 --- en mode symbolique : lire (r), écrire (w), exécuter (x) <br>
 --- en mode octal (0-7) : lecture (4), écriture (2), exécution (1) <br>
 
@@ -50,6 +50,7 @@ Dans ce même repertoire **/tmp**, creons un fichier **test1** et un repertoire 
 cd /tmp
 echo "Bonjour tout le monde" > test1
 mkdir ops_team
+mkdir dev_team
 touch ops_team/test1
 ```
 
@@ -91,6 +92,12 @@ chmod 664 test1
 
 ```
 chmod g+w,o-x ops_team
+```
+
+- au repertoire **dev_team**, ajoutons l'autorisation de lecture, écriture et d'exécution à l'utilisateur, puis de lecture, écriture aux groupes de l'utilisateur et enfin enlevons l'autorisation d'exécution aux autres utilisateurs.
+
+```
+chmod u+r+w+x,g+r+w,o-x dev_team
 ```
 
 - Revenons à notre utilisateur courant (dans notre cas **cloud_user**)
