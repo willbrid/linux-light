@@ -79,7 +79,7 @@ Sans argument la commande **id** permet d'afficher ces informations pour l'utili
 useradd -M -g ops rodrigue
 ```
 
-L'option **-M** permet d'éviter de créer le répertoire personnel et l'option **-g** permet de préciser le groupe par défaut.
+L'option **-M** permet d'éviter de créer le répertoire personnel et l'option **-g** permet de préciser son groupe principal (groupe par défaut).
 
 - listons tous les utilisateurs du système
 
@@ -93,7 +93,13 @@ cat /etc/passwd
 usermod -G dev,ops -u 1700 willbrid
 ```
 
-L'option **-G** permet de préciser les groupes (séparés par la virgule) où l'utilisateur sera attribué et l'option **-u** permet de mettre à jour l'identifiant de l'utilisateur **willbrid**
+L'option **-G** permet de préciser les groupes supplémentaires (séparés par la virgule) où l'utilisateur sera attribué et l'option **-u** permet de mettre à jour l'identifiant de l'utilisateur **willbrid**. <br><br>
+
+Si nous souhaitons modifier l'utilisateur **willbrid** en changeant son groupe principal (groupe par défaut) pour attribuer le groupe **devsecops** et avec un identifiant de 1400, l'on pourra faire :
+
+```
+usermod -g devsecops -u 1400 willbrid
+```
 
 - mettons à jour le nom du groupe **dev** en **dev2**
 
