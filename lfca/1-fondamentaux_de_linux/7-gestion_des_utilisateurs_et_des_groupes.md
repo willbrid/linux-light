@@ -2,19 +2,19 @@
 
 ## Définition
 
-- **useradd** : créer un nouvel utilisateur ou mettre à jour les informations par défaut du nouvel utilisateur.
+- **useradd** : crée un nouvel utilisateur ou met à jour les informations par défaut du nouvel utilisateur.
 
-- **groupadd** : créer un nouvel groupe.
+- **groupadd** : crée un nouvel groupe.
 
 - **usermod** : modifie un compte d'utilisateur.
 
 - **groupmod** : modifie une définition de groupe sur le système
 
-- **userdel** : supprimer un compte utilisateur et ses fichiers associés
+- **userdel** : supprime un compte utilisateur et ses fichiers associés
 
-- **groupdel** : supprimer un groupe
+- **groupdel** : supprime un groupe
 
-- **passwd** : modifier un mot de passe utilisateur. Le super utilisateur root, peut changer le mot de passe de n'importe quel utilisateur.
+- **passwd** : modifie un mot de passe utilisateur. Le super utilisateur **root** peut changer le mot de passe de n'importe quel utilisateur.
 
 ## Pratiques
 
@@ -33,8 +33,8 @@ groupadd dev
 - vérifions que le groupe **dev** a bien été créé
 
 ```
-cat /et/group
-cat /et/group | grep dev
+cat /etc/group
+cat /etc/group | grep dev
 ```
 
 - créons un groupe en définissant son identifiant
@@ -47,6 +47,12 @@ groupadd -g 1500 ops
 
 ```
 useradd willbrid
+```
+
+Si l'on souhaite créer l'utilisateur **willbrid** avec un identifiant précis (**1700**), l'on pourra faire :
+
+```
+useradd -u 1700 willbrid
 ```
 
 Cette commande créera aussi un répertoire **willbrid** dans le répertoire **home**.
@@ -65,7 +71,7 @@ id willbrid
 --- **gid** : identifiant du groupe par défaut de l'utilisateur **willbrid** <br>
 --- **groups** : identifiants des autres groupes de l'utilisateur **willbrid** <br>
 
-Sans argument la commande id permet d'afficher ces informations pour l'utilisateur courant.
+Sans argument la commande **id** permet d'afficher ces informations pour l'utilisateur courant.
 
 - créons un utilisateur **rodrigue** sans son repertoire personnel avec son groupe par défaut **ops**
 
