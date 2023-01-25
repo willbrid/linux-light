@@ -165,7 +165,15 @@ ls -ld /tmp/ops_team
 drwxrwxr--. 2 rodrigue cloud_user 19 Jan 19 04:25 /tmp/ops_team/
 ```
 
-Nous pouvons à présent accéder (ou lister) à son contenu avec l'utilisateur **cloud_user**
+Si nous souhaitons changer de groupe propriétaire du répertoire **/tmp/ops_team** de manière récursive, nous faisons :
+
+```
+sudo chgrp -R cloud_user /tmp/ops_team
+```
+
+L'option **-R** permet d'opérer le changement de manière récursive (c'est à dire le repertoire et tout son contenu).
+
+- Nous pouvons à présent accéder (ou lister) à son contenu avec l'utilisateur **cloud_user**
 
 ```
 cd /tmp/ops_team
