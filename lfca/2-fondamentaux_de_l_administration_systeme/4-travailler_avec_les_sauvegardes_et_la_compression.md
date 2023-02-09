@@ -6,7 +6,7 @@
 --- **c** : créer une archive <br>
 --- **x** : extraire une archive <br>
 --- **f** : spécifier le nom du fichier d'archive <br>
---- **t** : afficher le contenu d'une archive existant
+--- **t** : afficher le contenu d'une archive existant <br>
 --- **z** : filtrer l'archive via gzip <br>
 --- **j** : filtrer l'archive via bzip2 <br>
 --- **J** : filtrer l'archive via xz <br>
