@@ -31,3 +31,6 @@ Les avantages : <br>
 
 --- automatise la configuration d'une ou plusieurs VM <br>
 --- prend en charge plusieurs environnements VM <br>
+--- prend en charge plusieurs hyperviseurs <br>
+--- prend en charge l'utilisation sur plusieurs systèmes d'exploitation <br>
+--- prend en charge l'utilisation des plugins
