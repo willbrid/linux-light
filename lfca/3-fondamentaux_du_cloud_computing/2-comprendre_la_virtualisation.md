@@ -25,4 +25,9 @@ Un logiciel qui s'exécute sur un système physique et crée plusieurs systèmes
 
 Un outil de hashicorp pour créer et gérer des environnements de machines virtuelles dans un seul workflow. <br>
 --- vagrant : l'outil en ligne de commande <br>
---- vagrantfile : le fichier de configuration de la machine virtuelle
+--- vagrantfile : le fichier de configuration de la machine virtuelle <br>
+<br>
+Les avantages : <br>
+
+--- automatise la configuration d'une ou plusieurs VM <br>
+--- prend en charge plusieurs environnements VM <br>
