@@ -54,7 +54,7 @@
     </tr>
     <tr>
       <td style="background-color: #FF8C00; padding: 10px;">Réseau</td>
-      <td style="background-color: #26B260; padding: 10px;">Réseau</td>
+      <td style="background-color: rgb(255,140,0); padding: 10px;">Réseau</td>
     </tr>
   </tbody>
 </table>
