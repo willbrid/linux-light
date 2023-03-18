@@ -81,7 +81,7 @@
   </tbody>
 </table>
 
-Avec SAAS, tous les éléments : **Applications**, **Data**, **runtime**, **middleware**, **O/S**, **virtualisation**, **serveurs**, **stockage** et **réseau** sont gérés par le fournisseur.
+Avec SAAS, tous les éléments : **applications**, **Data**, **runtime**, **middleware**, **O/S**, **virtualisation**, **serveurs**, **stockage** et **réseau** sont gérés par le fournisseur.
 
 ## Les avantages et fonctionnalités du SAAS
 
