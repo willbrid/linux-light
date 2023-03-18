@@ -21,40 +21,40 @@
   </thead>
   <tbody>
     <tr>
-      <td style="background-color: #FF8C00; padding: 10px;">Applications</td>
-      <td style="background-color: #FF8C00; padding: 10px;">Applications</td>
+      <td>$${\color{orange}Applications}$$</td>
+      <td>$${\color{orange}Applications}$$</td>
     </tr>
     <tr>
-      <td style="background-color: #FF8C00; padding: 10px;">Data</td>
-      <td style="background-color: #FF8C00; padding: 10px;">Data</td>
+      <td>$${\color{orange}Data}$$</td>
+      <td>$${\color{orange}Data}$$</td>
     </tr>
     <tr>
-      <td style="background-color: #FF8C00; padding: 10px;">Runtime</td>
-      <td style="background-color: #FF8C00; padding: 10px;">Runtime</td>
+      <td>$${\color{orange}Runtime}$$</td>
+      <td>$${\color{orange}Runtime}$$</td>
     </tr>
     <tr>
-      <td style="background-color: #FF8C00; padding: 10px;">Middleware</td>
-      <td style="background-color: #FF8C00; padding: 10px;">Middleware</td>
+      <td>$${\color{orange}Middleware}$$</td>
+      <td>$${\color{orange}Middleware}$$</td>
     </tr>
     <tr>
-      <td style="background-color: #FF8C00; padding: 10px;">O/S</td>
-      <td style="background-color: #FF8C00; padding: 10px;">O/S</td>
+      <td>$${\color{orange}O/S}$$</td>
+      <td>$${\color{orange}O/S}$$</td>
     </tr>
     <tr>
-      <td style="background-color: #FF8C00; padding: 10px;">Virtualisation</td>
-      <td style="background-color: #26B260; padding: 10px;">Virtualisation</td>
+      <td>$${\color{orange}Virtualisation}$$</td>
+      <td>$${\color{green}Virtualisation}$$</td>
     </tr>
     <tr>
-      <td style="background-color: #FF8C00; padding: 10px;">Serveurs</td>
-      <td style="background-color: #26B260; padding: 10px;">Serveurs</td>
+      <td>$${\color{orange}Serveurs}$$</td>
+      <td>$${\color{green}Serveurs}$$</td>
     </tr>
     <tr>
-      <td style="background-color: #FF8C00; padding: 10px;">Stockage</td>
-      <td style="background-color: #26B260; padding: 10px;">Stockage</td>
+      <td>$${\color{orange}Stockage}$$</td>
+      <td>$${\color{green}Stockage}$$</td>
     </tr>
     <tr>
       <td>$${\color{orange}Réseau}$$</td>
-      <td style="background-color: #26B260; padding: 10px;">Réseau</td>
+      <td>$${\color{green}Réseau}$$</td>
     </tr>
   </tbody>
 </table>
