@@ -1,10 +1,11 @@
 # Rechercher des fichiers [Part1]
 
-Pour débuter créeons 3 fichiers et déplaçons les dans le répertoire **/etc**
+Pour débuter créeons 4 fichiers et déplaçons les dans le répertoire **/etc**
 
 ```
 cd ~/
 touch search.txt && touch SeArch.txt && touch SeARCH.txt && touch SEARCH.txt
+sudo mv search.txt /etc/
 sudo mv SeArch.txt /etc/
 sudo mv SeARCH.txt /etc/
 sudo mv SEARCH.txt /etc/
