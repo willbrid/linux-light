@@ -115,7 +115,7 @@ Only in folder1/: sorted.txt
 Only in folder1/: touch.txt
 ```
 
-- Ainsi, les 3 premières lignes disent **Only in**, et c'est notre répertoire **folder2**. Cela signifie que ces 3 fichiers n'existent qu'à l'emplacement **folder2**. <b>
+- Ainsi, les 3 premières lignes disent **Only in**, et c'est notre répertoire **folder2**. Cela signifie que ces 3 fichiers n'existent qu'à l'emplacement **folder2**.
 - La ligne suivante indique une fonctionnalité intéressante offerte par la commande **diff**. Lors d'une comparaison de répertoires, il comparera en fait les fichiers d'un répertoire aux fichiers correspondants du deuxième répertoire et générera un rapport sur les différences éventuelles. Il a trouvé 1 différence dans le fichier **category-list.csv**. 
 - Et puis après la comparaison des fichiers, il a continué avec une comparaison de répertoires et a trouvé des fichiers uniques au répertoire **folder1** qui n'existaient pas dans le répertoire **folder2**.
 
