@@ -30,6 +30,19 @@ Utilisé pour écrire la sortie d'une commande dans un fichier. Créera un fichi
 ls - l /etc > etc.txt
 ```
 
+```
+cat filenoexist > error.txt
+cat filenoexist 1> error.txt
+```
+
+Les deux commandes ci-dessus sont identiques car par défaut le descripteur associé à la redirection **>** est la sortie standard. Comme le fichier n'existe pas, un message d'erreur sera affiché sur le terminal provenant de l'erreur standard et le fichier **error.txt** sera créé mais avec un contenu vide. 
+
+```
+cat filenoexist 2> error.txt
+```
+
+Comme le fichier n'existe pas, aucun message d'erreur ne sera affiché et le fichier **error.txt** sera créé avec le contenu du message d'erreur provenant de l'erreur standard.
+
 - **>> (créer / ajouter)**
 
 Utilisé pour ajouter la sortie d'une commande à un fichier. Créera un fichier s'il n'existe pas, ou ajoutera une sortie à un fichier existant.
