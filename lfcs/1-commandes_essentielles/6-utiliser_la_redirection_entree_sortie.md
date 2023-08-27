@@ -48,7 +48,7 @@ Comme le fichier n'existe pas, aucun message d'erreur ne sera affiché et le fic
 cat filenoexist 2> /dev/null
 ```
 
-Comme le fichier n'existe pas, aucun message d'erreur ne sera affiché et le message d'erreur sera envoyé vers le un périphérique nul (**/dev/null**) qui supprime toutes les données qui y sont écrites.
+Comme le fichier n'existe pas, aucun message d'erreur ne sera affiché et le message d'erreur sera envoyé vers le périphérique nul (**/dev/null**) qui supprime toutes les données qui y sont écrites.
 
 - **>> (créer / ajouter)**
 
