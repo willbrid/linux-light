@@ -43,6 +43,13 @@ cat filenoexist 2> error.txt
 
 Comme le fichier n'existe pas, aucun message d'erreur ne sera affiché et le fichier **error.txt** sera créé avec le contenu du message d'erreur provenant de l'erreur standard.
 
+
+```
+cat filenoexist 2> /dev/null
+```
+
+Comme le fichier n'existe pas, aucun message d'erreur ne sera affiché et le message d'erreur sera envoyé vers le un périphérique nul (**/dev/null**) qui supprime toutes les données qui y sont écrites.
+
 - **>> (créer / ajouter)**
 
 Utilisé pour ajouter la sortie d'une commande à un fichier. Créera un fichier s'il n'existe pas, ou ajoutera une sortie à un fichier existant.
