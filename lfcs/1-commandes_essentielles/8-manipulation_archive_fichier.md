@@ -12,6 +12,8 @@ cd ~
 tar cvf filename.tar /path/to/source
 ```
 
+**Exemple :** 
+
 ```
 sudo tar cvf hosts.tar /etc/hosts 
 ```
@@ -21,6 +23,8 @@ sudo tar cvf hosts.tar /etc/hosts
 ```
 tar cvfz filename.tar.gz /path/to/source
 ```
+
+**Exemple :** 
 
 ```
 sudo tar cvfz hosts.tar.gz /etc/hosts
@@ -32,6 +36,8 @@ sudo tar cvfz hosts.tar.gz /etc/hosts
 tar -tf filename.tar
 tar -tf filename.tar.gz
 ```
+
+**Exemple :** 
 
 ```
 tar -tf hosts.tar
@@ -45,9 +51,18 @@ tar -xvf filename.tar
 tar -xvfz filename.tar.gz
 ```
 
+**Exemple :** 
+
 ```
 tar -xvf hosts.tar
-tar -xvfz hosts.tar.gz
+tar xvfz hosts.tar.gz
 ```
 
-Ici un dossier **etc** sera créé à la racine de notre repertoire **home**.
+Ici un dossier **etc** sera créé à la racine de notre repertoire **home**. <br>
+
+On peut aussi extraire un fichier archivé dans un repertoire précis.
+
+```
+mkdir torestore
+tar xvfz hosts.tar.gz --directory=torestore/
+```
