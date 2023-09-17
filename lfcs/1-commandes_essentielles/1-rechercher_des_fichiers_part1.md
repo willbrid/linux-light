@@ -87,7 +87,7 @@ Listons le contenu du repertoire **/opt/app**
 find /opt/app -ls
 ```
 
-Utilisons la commande **chown** avec **finc** pour remplacer la propriété de l'utilisateur par l'utilisateur et le groupe courant non root pour le répertoire **/opt/app** et son contenu :
+Utilisons la commande **chown** avec **find** pour remplacer la propriété de l'utilisateur par l'utilisateur et le groupe courant non root pour le répertoire **/opt/app** et son contenu :
 
 ```
 find /opt/app -exec sudo chown $(id -un):$(id -gn) {} \;
@@ -99,7 +99,7 @@ Listons à nouveau le contenu du repertoire **/opt/app**
 find /opt/app -ls
 ```
 
-Utilisons la commande **chmod** pour définir les autorisations **rw-rw----**, ou **660**, sur tous les fichiers **/opt/app**, à l'exception du répertoire lui-même et du fichier **/opt/app/test.sh** :
+Utilisons la commande **chmod** avec **find** pour définir les autorisations **rw-rw----**, ou **660**, sur tous les fichiers **/opt/app**, à l'exception du répertoire lui-même et du fichier **/opt/app/test.sh** :
 
 ```
 find /opt/app -name "f*" -ok chmod 660 {} \;
