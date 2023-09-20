@@ -23,7 +23,7 @@ cat 40_custom
 
 Le fichier **/etc/default/GRUB** contient les paramètres qui contrôlent le comportement réel du menu GRUB. En utilisant ce fichier, nous pouvons mettre à jour des lignes de configuration telles que le délai d'attente GRUB, le style du menu, la ligne de commande par défaut...
 <br><br>
-Chaque fois que nous apportons des modifications à la configuration de GRUB, nous devons d'exécuter la commande **update-grub**.
+Chaque fois que nous apportons des modifications à la configuration de GRUB, nous devons exécuter la commande **update-grub**.
 
 ```
 sudo update-grub
