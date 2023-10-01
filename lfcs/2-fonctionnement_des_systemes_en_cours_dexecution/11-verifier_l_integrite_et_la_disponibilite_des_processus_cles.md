@@ -69,3 +69,11 @@ ps aux --forest | grep sshd
 
 - Semblable à **top**, mais interactif et propose plus d'options.
 - Généralement non installé par défaut sur la plupart des distributions
+
+Les informations affichées par **htop** semblent assez similaires à **top**, mais elles sont beaucoup plus colorées et les informations récapitulatives ont changé. Nous pouvons toujours voir des informations sur la **mémoire** et le **swap**, la **disponibilité** et l'**état du processus**, et nos informations d'en-tête de sortie sont dans un format coloré. **htop** offre de nombreux avantages par rapport à **top** : <br>
+--- le mode interactif <br>
+Nous pourrions utiliser notre souris pour changer la vue d'affichage. Si nous nous déplaçons et cliquons sur **CPU**, cela changera la vue de tri en utilisation du **CPU**. Nous pourrions faire la même chose avec la **mémoire**. Nous pourrions faire la même chose avec le **temps**. Donc nous avons la possibilité de manipuler la sortie de plusieurs manières. Si nous descendons vers le bas de l’écran, nous pouvons voir différentes options disponibles. Chacune de ces options peut être utilisée en utilisant la touche de fonction ou en utilisant une souris. Donc, pour la recherche, nous pouvons cliquer sur le lien **Rechercher**, et cela fera apparaître le menu **Rechercher**.
+<br>
+--- la manière dont il affiche les informations utilisateur <br>
+En étant connecté au système en tant que **willbrid** et nous avons lancé **htop** en tant que **willbrid**. La sortie **htop** affiche **willbrid** en surbrillance, ce qui facilite l'identification des processus que l'utilisateur **willbrid** utilise. Les processus appartenant à tout autre compte apparaîtront grisés.
+
