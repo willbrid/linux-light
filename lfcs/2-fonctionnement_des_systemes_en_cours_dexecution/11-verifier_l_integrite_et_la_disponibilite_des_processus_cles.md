@@ -60,3 +60,12 @@ L'option **--forest** permet d'afficher en plus les relations parent-enfant de p
 ```
 ps aux --forest | grep sshd
 ```
+
+### top
+
+- Affiche l'activité du processus en temps réel, similaire au Gestionnaire des tâches sous Windows
+
+### htop
+
+- Semblable à **top**, mais interactif et propose plus d'options.
+- Généralement non installé par défaut sur la plupart des distributions
