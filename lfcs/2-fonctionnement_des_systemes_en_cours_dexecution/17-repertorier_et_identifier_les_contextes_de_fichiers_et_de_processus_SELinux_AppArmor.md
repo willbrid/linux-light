@@ -23,8 +23,10 @@ La sortie est générée sur 3 colonnes :
 - La deuxième colonne est le type de contexte.
 - la troisième colonne est le contexte lui-même. 
 
-Lorsqu'une étiquette de contexte correspond à un fichier, un processus ou un port, l'accès est autorisé. Si les étiquettes ne correspondent pas, le résultat dépend alors du mode dans lequel SELinux est exécuté : - Si SELinux s'exécute en mode **enforced**, l'accès n'est pas autorisé. 
-- Si SELinux est en mode **permissive**, il enregistrera l'infraction. - Si SELinux est désactivé, rien ne se passera du tout.
+Lorsqu'une étiquette de contexte correspond à un fichier, un processus ou un port, l'accès est autorisé. Si les étiquettes ne correspondent pas, le résultat dépend alors du mode dans lequel SELinux est exécuté : 
+- si **SELinux** s'exécute en mode **enforced**, l'accès n'est pas autorisé. 
+- si **SELinux** est en mode **permissive**, il enregistrera l'infraction.
+- si **SELinux** est désactivé, rien ne se passera du tout.
 
 Il est fortement recommander de ne pas désactiver **SELinux** ou **AppArmor** sur un système de production. Comme ces outils sont conçus pour nous aider, en tant qu'administrateur système, à garantir que nos systèmes sont protégés contre les pirates et les exploits.
 
