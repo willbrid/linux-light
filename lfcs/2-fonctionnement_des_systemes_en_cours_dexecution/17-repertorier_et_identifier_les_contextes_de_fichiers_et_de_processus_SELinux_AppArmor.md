@@ -8,7 +8,7 @@ Pour éviter les problèmes potentiels causés par les faiblesses et les exploit
 - **SELinux** est un module du noyau permettant de prendre en charge les politiques de sécurité du contrôle d'accès, y compris les contrôles d'accès obligatoires.
 - Il fait partie de l'écosystème RedHat/CentOS depuis 2005.
 - **semanage** : Outil de gestion des politiques **SELinux**
-<br>
+
 - **fcontext** : type d'objet **SELinux** permettant de gérer les définitions de mappage de contexte de fichier.
 
 --- Listons les enregistrements du type d’objet **fcontext**
