@@ -77,7 +77,7 @@ sudo setenforced permissive
 - **AppArmor** est différent de certains systèmes similaires car il est basé sur un chemin. Cela permet une combinaison de profils de mode d’application et de mode de réclamation.
 - Il a tendance à être plus simple et plus facile à mettre en œuvre et à apprendre que les autres systèmes MAC populaires.
 - Commun sur les systèmes Debian/Ubuntu. Les profils sont stockés dans le répertoire **/etc/apparmor.d/**.
-<br>
+
 --- Affichons diverses informations sur la stratégie **apparmor** actuelle.
 
 ```
