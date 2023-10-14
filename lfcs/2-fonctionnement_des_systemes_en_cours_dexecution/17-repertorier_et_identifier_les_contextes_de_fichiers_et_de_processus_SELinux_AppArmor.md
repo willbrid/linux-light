@@ -108,7 +108,7 @@ cd /var
 ls -Z
 ```
 
-Si les commandes **aa-enable**, **aa-disable**, **aa-complain** n'existe pas, nous pouvons les installer avec la commandes 
+Si les commandes **aa-enable**, **aa-disable**, **aa-complain** n'existe pas, nous pouvons les installer avec la commande 
 
 ```
 sudo apt install apparmor-utils
