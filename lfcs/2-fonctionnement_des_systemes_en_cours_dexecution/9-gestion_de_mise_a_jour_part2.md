@@ -53,6 +53,46 @@ Afficher les informations sur le package **gzip**
 rpm -qi gzip
 ```
 
+- Cas pratique
+
+Utilisons RPM pour rechercher la configuration, la documentation et les informations sur le package propriétaire de /sbin/httpd, ainsi que sur tous les packages installés. Après avoir installé un package comme **httpd**, nous pouvons utiliser **rpm** pour demander ses détails de configuration, sa documentation et d'autres informations.
+<br>
+Examinons tous les fichiers de documentation appartenant au package **httpd**
+
+```
+rpm -qd httpd
+```
+
+Affichons les fichiers de configuration du package **httpd**
+
+```
+rpm -qc httpd
+```
+
+Affichons quel package possède le fichier **/sbin/httpd**
+
+```
+rpm -qf /sbin/httpd
+```
+
+Affichons tous les packages installés par ordre de temps d'installation, du plus ancien au plus récent
+
+```
+rpm -qa --last | tac
+```
+
+Affichons les packages qui commencent par **httpd**
+
+```
+rpm -qa 'httpd*'
+```
+
+Vérifions que le package **elinks** est installé
+
+```
+rpm -q elinks
+```
+
 ### yum
 
 - Gestionnaire de packages pour les systèmes RedHat
@@ -112,6 +152,46 @@ yum check-update
 Mettre à jour un package
 ```
 sudo yum update python-perf.x86_64
+```
+
+- Cas pratique
+
+Supposons que les métadonnées et le cache YUM soient obsolètes et résolvons le problème afin que nous puissions mettre à jour le système. <br>
+Nettoyons les métadonnées et le cache YUM existants et créons-en un nouveau
+
+```
+yum clean all
+yum makecache
+```
+
+Listons les mises à jour disponibles
+
+```
+yum list updates
+```
+
+Mettons à jour les packages sur le système
+
+```
+yum -y update
+```
+
+Recherchons tous les paquets avec **apache** ou **http** dans leurs noms
+
+```
+yum search 'apache http'
+```
+
+Le serveur **apache** est livré avec un fichier **httpd**. Trouvons quel paquet inclut (fournit) un tel fichier
+
+```
+yum provides httpd
+```
+
+Installons le package **httpd**
+
+```
+yum -y install httpd
 ```
 
 ### dnf
