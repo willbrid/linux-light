@@ -30,6 +30,18 @@ dpkg -l zip
 dpkg -l unzip
 ```
 
+Utilisons la commande dpkg pour afficher les informations sur le package **tzdata**
+
+```
+dpkg -s tzdata
+```
+
+Utilisons **dpkg-reconfigure** pour ajuster le fuseau horaire sur **Africa/Douala**.
+
+```
+dpkg-reconfigure tzdata
+```
+
 ### aptitude
 
 - Interface de haut niveau avec le système de paquets Debian
