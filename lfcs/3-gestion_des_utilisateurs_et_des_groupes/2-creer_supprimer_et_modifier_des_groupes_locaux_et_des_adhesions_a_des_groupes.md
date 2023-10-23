@@ -173,7 +173,7 @@ delgroup groupname
 ```
 
 --- Utilitaire de haut niveau, non disponible sur toutes les distributions <br>
-- Peut être exécuté de manière interactive <br>
+--- Peut être exécuté de manière interactive <br>
 
 Exemple
 <br>
