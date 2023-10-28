@@ -11,7 +11,7 @@ Pour garantir la disponibilité et la convivialité de nos serveurs, nous devron
 
 - Pour une limite souple (**soft**), la valeur est également définie, mais l'utilisateur a la possibilité d'augmenter lui-même la limite jusqu'à la limite stricte (**hard**).
 
-La page de manuel couvre beaucoup d'informations, y compris le **rôle du fichier**, le **format de fichier**, ainsi que description du comportement du fichier, tout en fournissant quelques exemples.<br>
+La page de manuel couvre beaucoup d'informations, y compris le **rôle du fichier**, le **format de fichier**, ainsi que la description du comportement du fichier, tout en fournissant quelques exemples.<br>
 Les limites d'utilisateurs ont priorité sur les limites de groupe.
 
 ```
