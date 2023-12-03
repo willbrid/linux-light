@@ -1,6 +1,6 @@
 # Bac à sable
 
-Nous allons mettre en place notre bac à sable avec vagrant sous virtualbox 6.1.
+Nous allons mettre en place notre bac à sable avec vagrant sous virtualbox 7.0.
 
 ### Installation de Rocky Linux 8
 
@@ -8,7 +8,7 @@ Nous allons mettre en place notre bac à sable avec vagrant sous virtualbox 6.1.
 cd ~
 mkdir rocky
 cd rocky
-wget https://download.virtualbox.org/virtualbox/6.1.38/VBoxGuestAdditions_6.1.38.iso
+wget https://download.virtualbox.org/virtualbox/7.0.12/VBoxGuestAdditions_7.0.12.iso
 ```
 
 ```
@@ -24,11 +24,11 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vbguest.auto_update = false
   config.vbguest.no_remote = true
-  config.vbguest.iso_path = "./VBoxGuestAdditions_6.1.38.iso"
+  config.vbguest.iso_path = "./VBoxGuestAdditions_7.0.12.iso"
 
   # General Vagrant VM configuration.
-  config.vm.box = "geerlingguy/rockylinux8"
-  config.vm.box_version = "1.0.1"
+  config.vm.box = "willbrid/rockylinux8"
+  config.vm.box_version = "0.0.2"
   config.ssh.insert_key = false
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.provider :virtualbox do |v|
@@ -55,7 +55,7 @@ vagrant up
 cd ~
 mkdir ubuntu
 cd ubuntu
-wget https://download.virtualbox.org/virtualbox/6.1.38/VBoxGuestAdditions_6.1.38.iso
+wget https://download.virtualbox.org/virtualbox/7.0.12/VBoxGuestAdditions_7.0.12.iso
 ```
 
 ```
@@ -71,7 +71,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vbguest.auto_update = false
   config.vbguest.no_remote = true
-  config.vbguest.iso_path = "./VBoxGuestAdditions_6.1.38.iso"
+  config.vbguest.iso_path = "./VBoxGuestAdditions_7.0.12.iso"
 
   # General Vagrant VM configuration.
   config.vm.box = "geerlingguy/ubuntu2004"
