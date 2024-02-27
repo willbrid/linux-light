@@ -63,6 +63,13 @@ Ajoutons une route sur notre serveur **ubuntu-server** afin d'atteindre le DNS G
 sudo ip route add 8.8.0.0/16 proto static metric 10 via inet 192.168.56.110 dev enp0s8
 ```
 
+- **ip route add** : c'est la commande pour ajouter une route IP.
+- **8.8.0.0/16** : c'est l'adresse réseau et le masque de sous-réseau qui spécifient la plage d'adresses IP à atteindre via cette route. Dans ce cas, c'est le réseau 8.8.0.0 avec un masque de sous-réseau de 16 bits, ce qui signifie que les adresses IP comprises entre 8.8.0.0 et 8.8.255.255 sont incluses.
+- **proto static** : cela spécifie le protocole utilisé pour cette route. Dans ce cas, c'est statique, ce qui signifie que cette route est définie manuellement par l'utilisateur.
+- **metric 10** : c'est la métrique associée à cette route. La métrique est utilisée par le système d'exploitation pour déterminer la priorité des routes lorsqu'il y a plusieurs chemins possibles vers une destination. Une métrique inférieure indique une priorité plus élevée. Dans ce cas, la métrique est définie à 10.
+- **via inet 192.168.56.110** : c'est l'adresse IP de la passerelle à utiliser pour atteindre le réseau spécifié. L'adresse IP de la passerelle est **192.168.56.110**.
+- **dev enp0s8** : c'est le nom de l'interface réseau sortante à utiliser pour acheminer le trafic vers la passerelle spécifiée. Dans ce cas, c'est l'interface réseau **enp0s8**.
+
 Si nous consultons la table de routage du serveur **ubuntu-server** nous verrons qu'une route a été ajoutée
 
 ```
