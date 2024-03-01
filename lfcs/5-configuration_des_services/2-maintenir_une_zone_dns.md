@@ -167,7 +167,7 @@ sudo named-checkzone willbrid.com /var/named/willbrid.com
 
 Les résultats de ces commandes doivent afficher **OK**.
 
-- Exécution des tests de vérification des noms de domaine configurés avec la commande **dig**
+- Exécution des tests de vérification des noms de domaine configurés, avec la commande **dig**
 
 ```
 dig @localhost www.willbrid.com
@@ -177,4 +177,16 @@ dig @localhost www.willbrid.com
 dig @localhost ftp.willbrid.com
 ```
 
-Il faudrait regarder la partie **;; ANSWER SECTION:** afin de confirmer.
+Il faudrait regarder la partie **;; ANSWER SECTION:** afin de confirmer les enregistrements de nom.
+
+- Exécution des tests de vérification inverse à partir des IP configurées, avec la commande **dig**
+
+```
+dig @localhost -x 192.168.56.100
+```
+
+```
+dig @localhost -x 192.168.56.200
+```
+
+Il faudrait regarder la partie **;; ANSWER SECTION:** afin de confirmer les enregistrements inverses d'IP.
