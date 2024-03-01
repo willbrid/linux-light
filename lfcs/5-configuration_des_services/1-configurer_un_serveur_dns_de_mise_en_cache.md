@@ -16,7 +16,7 @@ Sous Rocky linux
 sudo dnf install bind bind-utils
 ```
 
-- Backup du fichier de configuration **/etc/bind/named.conf.options**
+- Backup du fichier de configuration **/etc/bind/named.conf.options** sous Ubuntu et **/etc/named.conf** sous Rocky linux
 
 Sous Ubuntu
 
@@ -60,7 +60,7 @@ options {
     allow-recursion { allowclients; };
     ...
     forwarders {
-	    0.0.0.0;
+        0.0.0.0;
         8.8.8.8;
         8.8.4.4;
 	};
