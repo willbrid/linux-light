@@ -4,6 +4,8 @@ En tant qu'administrateur système Linux, nous pouvons simplifier la gestion des
 
 Ici nous prendrons un exemple en créeant un alias depuis un serveur smtp **postfix**.
 
+**Postfix** est un logiciel de serveur de messagerie open source largement utilisé sous Linux et d'autres systèmes Unix. Il est principalement utilisé pour gérer l'acheminement, la livraison et le transfert des e-mails sur un système informatique.
+
 - Installation de **postfix**
 
 Sous Ubuntu
