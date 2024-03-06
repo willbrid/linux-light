@@ -8,12 +8,12 @@ Les formats de fichiers journaux sont stockés dans le fichier de configuration 
 Le formulaire **error.log** ne peut pas être modifié, uniquement le format **access.log**.
 
 Format de logs : <br>
---- %h = Nom d'hôte (Adresse IP si la résolution de nom est désactivée) <br>
---- %u = Utilisateur (si le site est authentifié) <br>
---- %t = La date et l'heure de la demande ont été faites <br>
---- %r = Le type de demande <br>
---- %>s = Statut de la requête (200, 404, etc.) <br>
---- \"%{User-agent}i\" = Navigateur utilisé pour effectuer la requête
+--- **%h** = Nom d'hôte (Adresse IP si la résolution de nom est désactivée) <br>
+--- **%u** = Utilisateur (si le site est authentifié) <br>
+--- **%t** = La date et l'heure de la demande ont été faites <br>
+--- **%r** = Le type de demande <br>
+--- **%>s** = Statut de la requête (200, 404, etc.) <br>
+--- **\"%{User-agent}i\"** = Navigateur utilisé pour effectuer la requête
 
 Sous Ubuntu
 
