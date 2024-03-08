@@ -28,13 +28,13 @@ sudo dnf -y install podman
 Sous ubuntu
 
 ```
-sudo docker ps
+sudo docker container ps
 ```
 
 Sous Rocky linux
 
 ```
-sudo podman ps
+sudo podman container ps
 ```
 
 - Exécutons un conteneur apache2 et exposons le sous le port 8080
@@ -69,7 +69,7 @@ Sous Rocky linux
 sudo podman container run -itd --name test-web -p 8080:80 -v /home/vagrant/html/:/usr/local/apache2/htdocs/:z httpd
 ```
 
-Vérifions su le conteneur test-web s'est bien exécuté
+Vérifions si le conteneur **test-web** a bien démarré
 
 Sous ubuntu
 
