@@ -75,7 +75,7 @@ virsh autostart --disable tiny
 Clonons notre machine virtuelle existante
 
 ```
-sudo virt-clone --originale=alpine --name=newalpine --file=/var/lib/libvirt/images/newalpine.qcow2
+sudo virt-clone --original=tiny --name=newtiny --file=/var/lib/libvirt/images/newtiny.qcow2
 ```
 
 Listons à nouveau toutes les machines virtuelles
