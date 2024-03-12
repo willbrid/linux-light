@@ -36,6 +36,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.cpus = 3
     v.linked_clone = true
   end
+  config.vm.disk :disk, name: "storage1", size: "5GB"
+  config.vm.disk :disk, name: "storage2", size: "3GB"
 
   # Rocky Server
   config.vm.define "rocky-server" do |srv|
@@ -83,6 +85,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.cpus = 3
     v.linked_clone = true
   end
+  config.vm.disk :disk, name: "storage1", size: "5GB"
+  config.vm.disk :disk, name: "storage2", size: "3GB"
 
   # Ubuntu Server
   config.vm.define "ubuntu-server" do |srv|
