@@ -106,3 +106,6 @@ sudo df -h
 
 --- **lvreduce** : réduit la taille d'un LV. Les extensions logiques libérées sont renvoyées au VG pour être utilisées par d'autres LV. <br>
 --- **lvremove** : supprime un ou plusieurs LV. Pour les LV standard, cela renvoie les extensions logiques utilisées par le LV au VG pour qu'elles soient utilisées par d'autres LV.
+
+
+NB: Il faudrait toujours faire un backup de données existantes avant d'effectuer toute modification sur un volume logique.
