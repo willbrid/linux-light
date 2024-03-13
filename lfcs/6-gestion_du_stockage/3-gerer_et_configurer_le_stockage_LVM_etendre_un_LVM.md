@@ -4,7 +4,7 @@ Avec LVM, un administrateur système Linux contrôle le stockage disponible et p
 
 ### Création d'une nouvelle partition primaire de type LVM de taille 500M
 
-Précédemment nous avons créé 2 partitions primaires de type LVM de taille 500M sur le phériphérique de bloc **/dev/sdc**. Ici, nous créons une 3ème partition primaire en suivant la procédure précédente : [creer une parition LVM](./2-gerer_et_configurer_le_stockage_LVM_creer_un_LVM.md).
+Précédemment nous avons créé 2 partitions primaires de type LVM de taille 500M sur le phériphérique de bloc **/dev/sdc**. Ici, nous créons une 3ème partition primaire en suivant la procédure précédente : [creer une partition LVM](./2-gerer_et_configurer_le_stockage_LVM_creer_un_LVM.md).
 
 ### Outils de gestion LVM
 
