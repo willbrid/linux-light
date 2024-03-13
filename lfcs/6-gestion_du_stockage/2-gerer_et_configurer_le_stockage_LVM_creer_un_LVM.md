@@ -25,7 +25,7 @@ Nous créons la 2ème partition exactement de la même manière.
 
 ### Outils de gestion LVM
 
-- Initialiser les blocs de périphériques (**/dev/sdc1** et **/dev/sdc2**) dans un volume physique pour LVM
+- Créer les volumes physiques pour les partitions LVM **/dev/sdc1** et **/dev/sdc2**
 
 ```
 sudo pvcreate /dev/sdc1 /dev/sdc2
