@@ -43,7 +43,7 @@ Nous répondons **YES** (en majuscule) et nous saisissons le mot de passe : **te
 sudo cryptsetup luksOpen /dev/sdb1 secret
 ```
 
-En appliquant la commande **lsblk**, nous constaterons que le nom **secret** au niveau de la partition **/dev/sdb1** et aussi qu'un périphérique **/dev/mapper/secret** est créé.
+En appliquant la commande **lsblk**, nous constatons le nom **secret** au niveau de la partition **/dev/sdb1** et aussi qu'un périphérique **/dev/mapper/secret** est créé.
 
 ```
 lsblk
