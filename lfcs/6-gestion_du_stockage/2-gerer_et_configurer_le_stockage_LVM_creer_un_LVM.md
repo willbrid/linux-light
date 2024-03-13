@@ -92,6 +92,16 @@ sudo mkdir /mnt/data
 sudo mount /dev/vg01/lv01 /mnt/data
 ```
 
+Pour garantir la persistance, nous ajoutons ce montage dans le fichier **/etc/fstab**
+
+```
+sudo vi /etc/fstab
+```
+
+```
+/dev/vg01/lv01          /mnt/data               ext4    defaults        0 0
+```
+
 Pour vérifier si le montage a été bien effectué, nous exécutons
 
 ```
