@@ -93,7 +93,7 @@ sudo fallocate -l 1G /swapfile1
 sudo dd if=/dev/zero of=/swapfile2 bs=1024 count=1048576
 ```
 
---- Vérifions que nos deux fichiers se sont créés
+--- Vérifions que nos deux fichiers sont créés
 
 ```
 ls -lah /
