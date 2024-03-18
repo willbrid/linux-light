@@ -71,7 +71,7 @@ sudo vi /etc/samba/smb.conf
     unix charset = UTF-8
     server min protocol = SMB3
     log file = /var/log/samba/%m.log
-	log level = 1
+    log level = 1
     hosts allow = 127.0.0.1 192.168.56.0/24 
 ...
 ...
@@ -106,7 +106,7 @@ sudo systemctl enable --now smb
 sudo useradd smbuser
 ```
 
---- attibuons l'utilisateur **smbuser** et un mot de passe comme paramètre d'authentification pour le serveur samba
+--- attribuons l'utilisateur **smbuser** et un mot de passe comme paramètre d'authentification pour le serveur samba
 
 ```
 sudo smbpasswd -a smbuser
