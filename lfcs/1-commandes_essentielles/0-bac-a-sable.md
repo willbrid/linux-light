@@ -39,6 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.disk :disk, name: "storage1", size: "5GB"
   config.vm.disk :disk, name: "storage2", size: "3GB"
   config.vm.disk :disk, name: "storage3", size: "2GB"
+  config.vm.disk :disk, name: "storage4", size: "5GB"
 
   # Rocky Server
   config.vm.define "rocky-server" do |srv|
@@ -89,6 +90,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.disk :disk, name: "storage1", size: "5GB"
   config.vm.disk :disk, name: "storage2", size: "3GB"
   config.vm.disk :disk, name: "storage3", size: "2GB"
+  config.vm.disk :disk, name: "storage4", size: "5GB"
 
   # Ubuntu Server
   config.vm.define "ubuntu-server" do |srv|
