@@ -119,7 +119,7 @@ sudo groupadd dev
 sudo groupadd ops
 ```
 
-- Avec la commande **edquota** appliquons un quota sur l'utilisateur **willbrid** et sur le groupe **dev** avec une limite **soft (souple)** de 100M et une limite **hard (stricte)** de 150M, sur la partition **/dev/sde1**
+- Avec la commande **edquota** appliquons un quota sur l'utilisateur **willbrid** et sur le groupe **dev**, avec une limite **soft (souple)** de 100M et une limite **hard (stricte)** de 150M, sur la partition **/dev/sde1**
 
 ```
 sudo edquota -u willbrid
@@ -149,16 +149,24 @@ sudo quota -vgs dev
 
 Nous pouvons voir que la limite de quota souple est fixée à **100 000 Ko**, soit **100 Mo**, et la limite stricte est fixée à **147 Mo**. Même si nous fixons la limite à **150 Mo** en raison de la surcharge, cela nous montre **147 Mo**.
 
-- Avec la commande **setquota** appliquons un quota sur l'utilisateur **rodriguo** avec une limite **soft (souple)** de 150M et une limite **hard (stricte)** de 200M, sur le repertoire **/mnt/quotadata**
+- Avec la commande **setquota** appliquons un quota sur l'utilisateur **rodriguo** et sur le groupe **ops**, avec une limite **soft (souple)** de 150M et une limite **hard (stricte)** de 200M, sur le repertoire **/mnt/quotadata**
 
 ```
 sudo setquota -u rodriguo 150M 200M 0 0 /mnt/quotadata
+```
+
+```
+sudo setquota -g ops 150M 200M 0 0 /mnt/quotadata
 ```
 
 Vérifions les informations sur ce quota utilisateur **rodriguo**
 
 ```
 sudo quota -vs rodriguo
+```
+
+```
+sudo quota -vgs ops
 ```
 
 Une fois les quotas activés et les utilisateurs et groupes configurés, nous pouvons exécuter des rapports d'utilisation pour surveiller l'activité.
