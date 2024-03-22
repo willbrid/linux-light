@@ -1,6 +1,6 @@
 # Bac à sable
 
-Nous allons mettre en place notre bac à sable avec vagrant sous virtualbox 7.0.
+Nous allons mettre en place notre bac à sable avec vagrant sous virtualbox 7.0 depuis une machine hôte **ubuntu 20.04**.
 
 ### Installation de Rocky Linux 8
 
