@@ -30,7 +30,7 @@ sudo fdisk /dev/sde
 
 --- Nous saisissons la lettre **'n'** pour créer une nouvelle partition <br>
 --- Nous saisissons la lettre **'p'** pour définir la partition comme **primaire** <br>
---- Nous validons pour accepter la valeur par défaut (**'1'**) du numéro de la parition <br>
+--- Nous validons pour accepter la valeur par défaut (**'1'**) du numéro de la partition <br>
 --- Nous validons pour accepter la valeur par défaut de la taille du premier secteur de disque <br>
 --- Nous saisissons **'+2048M'** pour définir la valeur de la taille du dernier secteur de disque <br>
 --- Nous saisissons la lettre **'p'** pour voir la nouvelle partition créée <br>

@@ -22,7 +22,7 @@ sudo fdisk /dev/sdb
 
 --- Nous saisissons la lettre **'g'** pour créer une nouvelle partition GPT vide et attribue une nouvelle étiquette de disque <br>
 --- Nous saisissons la lettre **'n'** pour créer une nouvelle partition <br>
---- Nous validons pour accepter la valeur par défaut (**'1'**) du numéro de la parition <br>
+--- Nous validons pour accepter la valeur par défaut (**'1'**) du numéro de la partition <br>
 --- Nous validons pour accepter la valeur par défaut de la taille du premier secteur de disque <br>
 --- Nous saisissons **'+800M'** pour définir la valeur de la taille du dernier secteur de disque <br>
 --- Nous saisissons la lettre **'p'** pour voir la nouvelle partition créée <br>
@@ -63,8 +63,8 @@ sudo parted /dev/sdb
 - Nous saisissons la commande **print** de **parted** pour afficher les partitions
 - Nous saisissons la commande **help** de **parted** pour afficher l'aide
 - Nous saisissons la commande **mkpart** de **parted** pour démarrer la création d'une nouvelle partition
---- Nous validons pour accepter la valeur par défaut du nom de la parition <br>
---- Nous saisissons **ext4** pour préciser le type de système de fichier de la parition <br>
+--- Nous validons pour accepter la valeur par défaut du nom de la partition <br>
+--- Nous saisissons **ext4** pour préciser le type de système de fichier de la partition <br>
 --- Nous saisissons **'801'** pour définir la valeur de la taille de départ et **'901'** pour la taille de fin <br>
 --- Nous saisissons **'yes'** pour enregistrer nos modifications
 - Nous saisissons à nouveau la commande **print** de **parted** pour afficher les partitions et voir la 2ème partition recréée
