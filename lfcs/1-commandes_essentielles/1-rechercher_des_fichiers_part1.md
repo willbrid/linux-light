@@ -194,8 +194,7 @@ Sur les systèmes d'exploitation Linux, la commande **chattr** modifie les **att
 Sous Linux, les **attributs de fichier** sont des indicateurs qui affectent la manière dont le fichier est stocké et accessible par le système de fichiers. Ce sont des métadonnées stockées dans l'**inode** associé au fichier.
 
 ```
-cd ~
-touch file file2 .file
+cd $HOME && touch file file2 .file
 ```
 
 ```
@@ -214,4 +213,8 @@ La deuxième commande affichera uniquement les attributs de fichiers du fichier 
 sudo chattr +i file2
 ```
 
-Cette commande ajoutera l'attribut de fichier **i** sur le fichier **file2**.
+Cette commande ajoutera l'attribut de fichier **i** sur le fichier **file2**. Pour vérifier la modification apportée, nous exécutons
+
+```
+lsattr file2
+```
