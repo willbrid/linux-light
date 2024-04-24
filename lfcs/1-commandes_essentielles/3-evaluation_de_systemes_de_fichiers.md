@@ -1,7 +1,7 @@
 # Évaluer et comparer les fonctionnalités et options de base du système de fichiers
 
 Un système de fichiers nous permet de stocker et de récupérer des données sur un ordinateur.
-<br><br>
+
 **Périphérique bloc** : support utilisé pour stocker des données (SSD, disque dur magnétique, CD, flash, disquette) <br>
 **Système de fichiers** : méthode permettant au système d'exploitation d'interagir avec les données sur un **périphérique bloc**.
 
