@@ -1,6 +1,6 @@
 # Rechercher des fichiers [Part2]
 
-## Commande which
+### Commande which
 
 Renvoie l'emplacement d'une commande en fonction des paramètres PATH.
 
@@ -12,7 +12,7 @@ which python
 which nano
 ```
 
-## Commande whereis
+### Commande whereis
 
 - Renvoie l'emplacement du fichier binaire, du ou des fichiers source et des pages de manuel.
 - Retourne plusieurs versions d'un fichier si elles existent.
@@ -25,7 +25,7 @@ whereis python
 whereis python | tr " " '\n'
 ```
 
-## Commande type
+### Commande type
 
 - Renvoie des informations sur le type de commande.
 - Les détails sont basés sur la relation entre la commande et la configuration du shell.
