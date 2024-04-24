@@ -3,15 +3,13 @@
 Pour débuter créeons 4 fichiers et déplaçons les dans le répertoire **/etc**
 
 ```
-cd ~/
-touch search.txt && touch SeArch.txt && touch SeARCH.txt && touch SEARCH.txt
-sudo mv search.txt /etc/
-sudo mv SeArch.txt /etc/
-sudo mv SeARCH.txt /etc/
-sudo mv SEARCH.txt /etc/
+sudo touch /etc/search.txt
+sudo touch /etc/SeArch.txt
+sudo touch /etc/SeARCH.txt
+sudo touch /etc/SEARCH.txt
 ```
 
-## Commande find
+### Commande find
 
 --- Commande très puissante utilisée pour rechercher des fichiers ou des répertoires <br>
 --- Peut rechercher par nom, type de fichier, horodatage et de nombreux autres attributs de fichier <br>
@@ -64,7 +62,7 @@ Les types de fichiers sont : <br>
 --- **s** -> socket <br>
 --- **D** -> door (Solaris) <br>
 
-Pour rechercher plusieurs types à la fois, nous pouvons fournir la liste combinée des lettres de type séparées par une virgule `,' (extension GNU).
+Pour rechercher plusieurs types à la fois, nous pouvons fournir la liste combinée des lettres de type séparées par une virgule ',' (extension GNU).
 
 - **Recherche de fichiers par son type et par le nom de son propriétaire dans un repertoire spécifique**
 
@@ -106,7 +104,7 @@ find /opt/app -name "f*" -ok chmod 660 {} \;
 ```
 
 Nous tapons simplement **y** pour chaque invite **yes/no**.
-<br><br>
+
 Modifions les autorisations sur tout ce qui ne commence pas par **f** (le répertoire lui-même et le script **test.sh**)
 
 ```
@@ -114,14 +112,14 @@ find /opt/app '!' -name "f*" -ok chmod 770 {} \;
 ```
 
 Nous tapons simplement **y** pour chaque invite **yes/no**.
-<br><br>
-Recherchons un répertoire sous **/home** qui n'appartient pas à un utilisateur ou à un groupe
+
+Recherchons un **répertoire** sous **/home** qui n'appartient pas à un utilisateur ou à un groupe
 
 ```
 find /home -nouser -nogroup -ls
 ```
 
-Recherchons tout ce qui n'est pas propriétaire d'un utilisateur ou d'un groupe
+Recherchons **tout ce qui** n'est pas propriétaire d'un utilisateur ou d'un groupe
 
 ```
 find /home -nouser -a -nogroup -ls
@@ -139,7 +137,7 @@ Vérifions que nous les avons tous
 sudo find /home -nouser -a -nogroup -ls
 ```
 
-## Commande locate
+### Commande locate
 
 --- Recherche plus rapide que la commande **find** <br>
 --- Options de recherche limitées : impossible de rechercher par attributs ou métadonnées <br>
@@ -192,7 +190,7 @@ Changt : 2023-05-11 04:30:29.168987682 +0100
 - Commande **lsattr** et **chattr**
 
 Sur les systèmes d'exploitation Linux, la commande **chattr** modifie les **attributs des fichiers** et **lsattr** les affiche.
-<br>
+
 Sous Linux, les **attributs de fichier** sont des indicateurs qui affectent la manière dont le fichier est stocké et accessible par le système de fichiers. Ce sont des métadonnées stockées dans l'**inode** associé au fichier.
 
 ```
@@ -209,7 +207,7 @@ lsattr file
 ```
 
 La première commande affichera les attributs de fichiers de tous les fichiers contenu dans le repertoire **home**.
-<br>
+
 La deuxième commande affichera uniquement les attributs de fichiers du fichier **file**.
 
 ```
