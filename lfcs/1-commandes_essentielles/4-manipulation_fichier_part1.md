@@ -13,8 +13,6 @@ cat filename.txt
 - Utilitaires Linux similaires, utilisés pour contrôler l'affichage du contenu des fichiers
 - Peut être utilisé sur un fichier directement ou sur la sortie d'une autre commande
 
-<br>
-
 **more** est un filtre pour parcourir le texte un écran à la fois.
 
 ```
@@ -46,8 +44,6 @@ cat filename.txt | less
 Une fois le fichier ouvert, nous pouvons utiliser la syntaxe **/pattern** pour rechercher vers l'avant dans le fichier la N-ième ligne contenant le **pattern**. **N** est par défaut égal à 1. Le **pattern** est une expression régulière, telle qu'elle est reconnue par la bibliothèque d'expressions régulières fournie par notre système. La recherche commence à la première ligne affichée (mais les options **-a** et **-j** peuvent changer cela). <br>
 L'option **-N** permet d'afficher les numéros de lignes du fichier. <br>
 L'option **+F** permet suivre les nouvelles lignes du fichier en realtime.
-
-<br>
 
 **sort** : permet de trier les lignes des fichiers texte.
 
@@ -88,5 +84,5 @@ nano /etc/hosts
 ```
 
 Une fois le fichier ouvert, nous pouvons : 
-- couper une ligne du contenu du fichier : crtl + k
-- enregistrer le contenu modifié : crtl + o
+- couper une ligne du contenu du fichier : **crtl + k**
+- enregistrer le contenu modifié : **crtl + o**
