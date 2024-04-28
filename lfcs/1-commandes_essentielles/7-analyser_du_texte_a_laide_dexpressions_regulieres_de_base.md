@@ -2,11 +2,11 @@
 
 ### Qu'est-ce qu'une expression régulière ?
 
-Une expression régulière, souvent appelée regex ou regexp, est une série spécifique de caractères utilisée pour définir un modèle de recherche.
+Une expression régulière, souvent appelée **regex** ou **regexp**, est une série spécifique de caractères utilisée pour définir un modèle de recherche.
 
 ### Pourquoi devrais-je utiliser une expression régulière ?
 
-Une expression régulière est le plus souvent utilisée pour l'activité « find all » ou « find and replace ». Il est également utilisé lorsque nous ne connaissons qu'une partie d'une chaîne de recherche ou si nous utilisons une recherche par caractère générique.
+Une expression régulière est le plus souvent utilisée pour l'activité « **find all** » ou « **find and replace** ». Il est également utilisé lorsque nous ne connaissons qu'une partie d'une chaîne de recherche ou si nous utilisons une recherche par caractère générique.
 
 ### Bases des expressions régulières
 
