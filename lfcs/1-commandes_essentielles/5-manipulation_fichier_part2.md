@@ -23,22 +23,24 @@ Au format ed (format par défaut), supposons que nous avons le résultat suivant
 < Tony Perez,7
 ```
 
-La sortie par défaut de la commande **diff** est au format **ed**. <br>
-- Au niveau de la première ligne, **26c26**, le premier 26 indique la ligne 26 du premier fichier. Le **c** signifie **changement** et le deuxième 26 signifie la ligne 26 dans le deuxième fichier. 
-- Au niveau de la deuxième ligne, qui est **"< Dennis Eckersley,6"**, le symbole **inférieur** à indique qu’il s’agit de la valeur du premier fichier. 
+La sortie par défaut de la commande **diff** est au format **ed**.
+
+- Au niveau de la première ligne, **26c26**, le premier **26** indique la ligne **26** du premier fichier. Le **c** signifie **changement** et le deuxième **26** signifie la ligne **26** dans le deuxième fichier. 
+- Au niveau de la deuxième ligne, qui est **"< Dennis Eckersley,6"**, le symbole **inférieur à** indique qu’il s’agit de la valeur du premier fichier. 
 - La troisième ligne est composée de 3 tirets. Ceci est simplement un indicateur que nous passons au deuxième fichier. 
-- La quatrième ligne suivante est **"> Dennis Eckersley, 16 ans"**. Le symbole **supérieur** à indique qu’il s’agit de la valeur du deuxième fichier. 
+- La quatrième ligne suivante est **"> Dennis Eckersley, 16 ans"**. Le symbole **supérieur à** indique qu’il s’agit de la valeur du deuxième fichier. 
 - Donc, si nous revenons à la première ligne, **26c26**, cela signifie que nous devons modifier la ligne 26 du premier fichier pour qu'elle corresponde à la ligne 26 du deuxième fichier.
-- Au niveau de la cinquième ligne qui est **87a88**. La valeur 87 indique la ligne 87 du premier fichier. Le **a** signifie **ajouter** et la valeur 88 indique la ligne 88 dans le deuxième fichier. 
+- Au niveau de la cinquième ligne qui est **87a88**. La valeur **87** indique la ligne **87** du premier fichier. Le **a** signifie **ajouter** et la valeur **88** indique la ligne **88** dans le deuxième fichier. 
 - La sixième ligne suivante **"> Nolan Ryan,8"** indique qu’il s’agit de la valeur du deuxième fichier. 
-- Donc, cette action **87a88** signifie qu'après la ligne 87 du premier fichier, nous devons ajouter la ligne 88 du deuxième fichier. - La septième ligne est **121d121**. Le premier 121 indique la ligne 121 du premier fichier. Le **d** signifie **supprimer**. Le deuxième 121 indique la ligne 121 dans le deuxième fichier. Donc, ce que cette action nous dit de faire, c'est que nous devons supprimer la ligne 121 du premier fichier afin de faire correspondre la ligne 121 du deuxième fichier. La ligne **"< Tony Perez,7"** est la ligne du premier fichier que nous devons supprimer.
+- Donc, cette action **87a88** signifie qu'après la ligne **87** du premier fichier, nous devons ajouter la ligne **88** du deuxième fichier. 
+- La septième ligne est **121d121**. Le premier **121** indique la ligne **121** du premier fichier. Le **d** signifie **supprimer**. Le deuxième **121** indique la ligne **121** dans le deuxième fichier. Donc, ce que cette action nous dit de faire, c'est que nous devons supprimer la ligne **121** du premier fichier afin de faire correspondre la ligne 121 du deuxième fichier. La ligne **"< Tony Perez,7"** est la ligne du premier fichier que nous devons supprimer.
 
 ```
 diff -c filename1.csv filename2.csv
 ```
 
 L'option **-c** permet d'activer l'affichage en mode contextuel.
-<br>
+
 En mode contextuel, supposons que nous avons le résultat suivant :
 
 ```
@@ -85,21 +87,19 @@ En mode contextuel, supposons que nous avons le résultat suivant :
 
 - En regardant la première ligne, les 3 astérisques représenteront le premier fichier. A la deuxième ligne, les 3 tirets représenteront le deuxième fichier.
 - La ligne suivante n'est qu'un séparateur. 
-- La ligne suivante commence par 3 astérisques...
-cela indique que nous sommes dans le premier fichier. 23,29 indique que nous regardons les lignes 23-29. Ceci est suivi du contenu de ces lignes du premier fichier. Le **!** indique que cette valeur doit être modifiée.
+- La ligne suivante commence par 3 astérisques.
+cela indique que nous sommes dans le premier fichier. **23,29** indique que nous regardons les lignes 23-29. Ceci est suivi du contenu de ces lignes du premier fichier. Le **!** indique que cette valeur doit être modifiée.
 - Si nous continuons vers le bas, la ligne qui commence par 3 tirets indique le contenu du deuxième fichier. Nous pouvons également voir qu'il y a un point d'exclamation dans cette section. Alors, que signifient ces 2 points d’exclamation ? Cela signifie que nous devons accéder au premier fichier, modifier la ligne avec un point d'exclamation pour qu'elle corresponde à la ligne du deuxième fichier qui a un point d'exclamation.
-- En continuant la liste, nous avons un autre saut de ligne puis nous arrivons à une ligne qui commence par 3 astérisques indiquant le premier fichier. Et ceci est suivi de 85,90 - cela signifie que nous comparons les lignes 85 à 90 pour le contexte. 
-- La ligne suivante comporte 3 tirets : cela indique le deuxième fichier. Et puis 85,91 indique que nous utilisons les lignes 85 à 91 pour la comparaison du contexte. Si nous faisons défiler la liste, nous pouvons voir qu'il y a un **+** à côté de la deuxième instance de **"Nolan Ryan"**. Cela signifie que nous devons ajouter cette instance au premier fichier pour que les 2 soient identiques. 
-- Et en descendant vers la dernière section ici, nous voyons la ligne qui commence par 3 astérisques-- cela indique le premier fichier,
-et nous regardons les lignes 118 à 124 à titre de comparaison.
-Si nous faisons défiler vers le bas, nous pouvons voir qu'il y a un - devant l'entrée de **"Tony Perez"**. Le tiret indique une valeur qui doit être supprimée. Si on continue vers le bas, on voit les 3 tirets indiquant le deuxième fichier, et on voit qu'il n'y a aucune ligne référencée pour le deuxième fichier. Cela signifie donc que nous devons supprimer la ligne indiquant **"Tony Perez"** du premier fichier, afin qu'elle corresponde au deuxième fichier.
+- En continuant la liste, nous avons un autre saut de ligne puis nous arrivons à une ligne qui commence par 3 astérisques indiquant le premier fichier. Et ceci est suivi de **85,90** - cela signifie que nous comparons les lignes **85** à **90** pour le contexte. 
+- La ligne suivante comporte 3 tirets : cela indique le deuxième fichier. Et puis **85,91** indique que nous utilisons les lignes **85** à **91** pour la comparaison du contexte. Si nous faisons défiler la liste, nous pouvons voir qu'il y a un **+** à côté de la deuxième instance de **"Nolan Ryan"**. Cela signifie que nous devons ajouter cette instance au premier fichier pour que les 2 soient identiques. 
+- Et en descendant vers la dernière section ici, nous voyons la ligne qui commence par 3 astérisques. cela indique le premier fichier, et nous regardons les lignes **118** à **124** à titre de comparaison.
+Si nous faisons défiler vers le bas, nous pouvons voir qu'il y a un tiret **-** devant l'entrée de **"Tony Perez"**. Le tiret indique une valeur qui doit être supprimée. Si on continue vers le bas, on voit les 3 tirets indiquant le deuxième fichier, et on voit qu'il n'y a aucune ligne référencée pour le deuxième fichier. Cela signifie donc que nous devons supprimer la ligne indiquant **"Tony Perez"** du premier fichier, afin qu'elle corresponde au deuxième fichier.
 
 ```
 diff folder1 folder2
 ```
 
-La comparaison des repertoires est similaire à celle des fichiers. <br>
-Supposons que nous avons le résultat suivant :
+La comparaison des repertoires est similaire à celle des fichiers. Supposons que nous avons le résultat suivant :
 
 ```
 Only in folder2/: ._basic-list.txt
@@ -122,7 +122,7 @@ Only in folder1/: touch.txt
 ### Commande comm
 
 - Comparer deux fichiers triés ligne par ligne.
-- La sortie est affichée en 3 colonnes, uniques au fichier **file1**, unique au fichier **file2**, et identique dans les deux fichiers.
+- La sortie est affichée en 3 colonnes, unique au fichier **file1**, unique au fichier **file2**, et identique dans les deux fichiers.
 
 ```
 comm filename1.csv filename2.csv
