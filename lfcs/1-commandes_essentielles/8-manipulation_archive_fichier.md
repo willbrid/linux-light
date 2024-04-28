@@ -58,7 +58,7 @@ tar -xvf hosts.tar
 tar xvfz hosts.tar.gz
 ```
 
-Ici un dossier **etc** sera créé à la racine de notre repertoire **home**. <br>
+Ici un dossier **etc** sera créé à la racine de notre repertoire **home**.
 
 On peut aussi extraire un fichier archivé dans un repertoire précis.
 
