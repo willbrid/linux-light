@@ -48,7 +48,7 @@ tar -tf hosts.tar.gz
 
 ```
 tar -xvf filename.tar
-tar -xvfz filename.tar.gz
+tar xvfz filename.tar.gz
 ```
 
 **Exemple :** 
