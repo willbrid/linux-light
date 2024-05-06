@@ -20,6 +20,7 @@ command > filename3.txt
 touch filename1.txt
 nano filename2.txt # avec pour contenu : <Bonjour tout le monde>
 echo "Bonjour tout le monde" > filename3.txt
+cat filename3.txt > filename4.txt
 ```
 
 ### Copier un fichier
@@ -94,48 +95,68 @@ rm -rf directory
 
 ### Transférer des fichiers en toute sécurité sur le réseau
 
-Ici nous supposons que nous avons deux serveurs : 
+Ici nous utiliserons nos deux serveurs provisionnés via vagrant : 
 
-- **server1**, son user **user1** et son repertoire **/opt/app**
+--- **rocky-server**, son user **vagrant** et son repertoire **/opt/app** contenant 2 fichiers **file1** et **file2**
 
-- **server2**, son user **user2** et son repertoire **/opt/api**
+```
+sudo mkdir /opt/app && sudo chown -R vagrant:vagrant /opt/app && touch /opt/app/file1  /opt/app/file2
+```
 
-Nous supposerons que nous sommes connectés par ssh sur le serveur **server1**. 
-<br><br>
-Utilisons **ls -lR /opt/** localement sur le serveur **server1**, puis exécutons-la à distance sur le serveur **server2** avec ssh
+--- **ubuntu-server**, son user **vagrant** et son repertoire **/opt/api**
+
+```
+sudo mkdir /opt/api && sudo chown -R vagrant:vagrant /opt/api
+```
+
+- Sur le serveur **rocky-server** 
+
+Utilisons **ls -lR /opt/** localement sur le serveur **rocky-server** et à distance sur le serveur **ubuntu-server** par ssh depuis le serveur **rocky-server**
 
 ```
 ls -lR /opt
-ssh user2@server2 ls -lR /opt
 ```
 
-Copions en toute sécurité le répertoire **/opt/app** du serveur **server1** vers le répertoire **/opt** sur le serveur **server2**
+```
+ssh vagrant@192.168.56.111 ls -lR /opt
+```
+
+Copions en toute sécurité le répertoire **/opt/app** du serveur **rocky-server** vers le répertoire **/opt/api** du serveur **ubuntu-server**
 
 ```
-scp -rp /opt/app user2@server2:/opt
+scp -rp /opt/app vagrant@192.168.56.111:/opt/api
 ```
 
 L'option **-r** la rend récursif et **-p** lui permet de conserver les horodatages et les autorisations.
-<br><br>
-Synchronisons le répertoire **/opt/api** du serveur **server2** avec le serveur **server1**
+
+Créons un fichier **file3** dans le répertoire **/opt/app** du serveur **rocky-server**
 
 ```
-rsync -aP user2@server2:/opt/api /opt
+touch /opt/app/file3
 ```
 
-Vérifions que les répertoires **/opt/app** et **/opt/api** sont les mêmes sur **server1** et **server2**
+Synchronisons le répertoire **/opt/api/app** du serveur **ubuntu-server** avec le répertoire **/opt/app** du serveur **rocky-server**
 
 ```
-# Sur server1
-ls -lR /opt
-# Sur server2
-ssh user2@server2 ls -lR /opt
+rsync -aP /opt/app/ vagrant@192.168.56.111:/opt/api/app/
+```
+
+Vérifions que les répertoires **/opt/api/app** du serveur **ubuntu-server** et **/opt/app** du serveur **rocky-server** sont les mêmes.
+
+Sur **rocky-server**
+```
+ls -lR /opt/app
+```
+
+Sur **ubuntu-server** depuis le serveur **rocky-server**
+```
+ssh vagrant@192.168.56.111 ls -lR /opt/api/app
 ```
 
 Nous pouvons utiliser la commande **rsync** pour vérifier que le **contenu**, les **horodatages** et les **autorisations** sont les mêmes.
 
 ```
-rsync -naP /opt/ user2@server2:/opt
+rsync -naP /opt/app/ vagrant@192.168.56.111:/opt/api/app/
 ```
 
-L'option **-n** permet d'effectuer un **dry-run** sans aucune modification, l'option **-a** permet d'activer le mode archive et l'option **-P** est équivalent aux options combinées **--partial --progress** qui permettent de conserver les fichiers partiellement transférés (**--partial**) et d'afficher la progression pendant le transfert (**--progress**).
+L'option **-n** permet d'effectuer un **dry-run** sans aucune modification, l'option **-a** permet d'activer le mode **archive** et l'option **-P** est équivalent aux options combinées **--partial --progress** qui permettent de conserver les fichiers partiellement transférés (**--partial**) et d'afficher la progression pendant le transfert (**--progress**).
