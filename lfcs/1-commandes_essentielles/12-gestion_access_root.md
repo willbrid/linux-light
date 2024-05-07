@@ -55,7 +55,7 @@ root	ALL=(ALL) 	ALL
 
 En règle générale, c'est ici que nous entrons les comptes d'utilisateurs individuels pour leur accorder l'accès. Dans ce fichier sudoers particulier, seul le compte **root** a obtenu l'accès individuellement et les privilèges qui ont été accordés à **root** nous définissent : <br>
 --- le premier **ALL** indique que le compte **root** peut s'exécuter à partir de n'importe quelle session de terminal. <br>
---- la section suivante, entre parenthèses (**ALL:ALL** ou **ALL*), indique que le compte **root** peut s'exécuter avec tous les utilisateurs et tous les groupes. <br>
+--- la section suivante, entre parenthèses (**ALL:ALL** pour Ubuntu ou **ALL** pour Rocky), indique que le compte **root** peut s'exécuter avec tous les utilisateurs et tous les groupes. <br>
 --- et le **ALL** final signifie que l'utilisateur **root** peut exécuter n'importe quelle commande.
 
 - Section des membres du groupe d'administrateurs (**admin** ou **wheel**) qui peuvent obtenir les privilèges **root**
@@ -79,7 +79,7 @@ Sous Ubuntu
 %sudo	ALL=(ALL:ALL) ALL
 ```
 
-Créeons un utilisateur **basicuser** avec un mot de passe **test**
+Créons un utilisateur **basicuser** avec un mot de passe **test**
 
 Sous Ubuntu
 ```
@@ -159,7 +159,7 @@ Déconnectons nous de la session de l'utilisateur **basicuser**
 exit
 ```
 
-Créeons un autre utilisateur **newuser** avec un mot de passe **test**
+Créons un autre utilisateur **newuser** avec un mot de passe **test**
 
 Sous Ubuntu
 ```
