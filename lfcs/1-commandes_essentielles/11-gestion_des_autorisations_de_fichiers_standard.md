@@ -5,9 +5,7 @@ Tout le monde a accès à un fichier contenant des données sensibles. Un associ
 - Préréquis
 
 ```
-cd ~
-mkdir projects
-echo "This file is named info.txt" > projects/info.txt
+cd ~ && mkdir projects && echo "This file is named info.txt" > projects/info.txt
 ```
 
 ### Quelles sont les options d'autorisation ?
@@ -18,23 +16,23 @@ Nous pouvons afficher les informations d'autorisation et de propriété à l'aid
 drwxr-xr-x 5 linux linux 4096 Oct 4 14:06 Documents
 ```
 
-- La première colonne peut avoir 3 valeurs. Le premier est un **-** qui indique qu'il s'agit d'un fichier. La deuxième valeur est un **d**, qui indique un répertoire. Et la troisième valeur est un **l**, qui indique un lien.
+- La première partie de la première colonne peut avoir 3 valeurs. Le premier est un **-** qui indique qu'il s'agit d'un fichier. La deuxième valeur est un **d**, qui indique un répertoire. Et la troisième valeur est un **l**, qui indique un lien.
 
-- La partie suivante de la première colonne concerne les autorisations réelles des fichiers. Ceux-ci sont affichés sous forme de 3 groupes de 3 lettres : <br>
+- La partie suivante de la première colonne concerne les autorisations réelles des fichiers. Ceux-ci sont affichés sous forme de 3 groupes de 3 lettres :
 
 --- Le premier groupe de 3 lettres est destiné à l'utilisateur ou au propriétaire du fichier. <br>
 
 --- Le deuxième groupe de 3 lettres est destiné au groupe. <br>
 
---- Et la troisième série de 3 lettres est destinée à tous les autres utilisateurs. <br>
+--- Et la troisième série de 3 lettres est destinée à tous les autres utilisateurs.
 
-Nous pouvons utiliser le processus symbolique ou le processus octal. La lettre **r** signifie lire, la lettre **w** signifie écrire et la lettre **x** signifie exécuter. En valeurs octales, la valeur de lecture est un **4**, la valeur d’écriture est un **2** et la valeur d’exécution est un **1**. <br>
+Nous pouvons utiliser le processus symbolique ou le processus octal. La lettre **r** signifie **lire**, la lettre **w** signifie **écrire** et la lettre **x** signifie **exécuter**. En valeurs octales, la **valeur de lecture** est un **4**, la **valeur d’écriture** est un **2** et la **valeur d’exécution** est un **1**.
 
-Et puis il existe également des autorisations spéciales : <br> 
+Et puis il existe également des autorisations spéciales :
 
---- Le premier est le **suid** : il s'agit d'une autorisation spéciale qui permet à un fichier en cours d'exécution de s'exécuter avec les privilèges du propriétaire. Le **suid** est représenté par un **s** et a une valeur octale de **4000**. <br>
+--- Le premier est le **suid** : il s'agit d'une autorisation spéciale qui permet à un fichier en cours d'exécution de s'exécuter avec les privilèges du propriétaire. Le **suid** est représenté par un **s** et a une valeur octale de **4000**.
 
---- Le deuxième est le **sguid**. Ceci est similaire au suid, mais il permet au fichier d'être exécuté avec les privilèges de groupe plutôt qu'avec les privilèges de propriétaire. Ceci est également représenté par un **s** et a une valeur octale de **2000**.  <br>
+--- Le deuxième est le **sguid**. Ceci est similaire au **suid**, mais il permet au fichier d'être exécuté avec les privilèges de groupe plutôt qu'avec les privilèges de propriétaire. Ceci est également représenté par un **s** et a une valeur octale de **2000**.
 
 --- Le troisième est le **sticky** : il s'agit d'une autorisation spéciale qui interdit à un utilisateur non propriétaire ou non groupe de déplacer, supprimer ou renommer un fichier. Ceci est représenté par la lettre **t** et a une valeur octale de **1000**.
 
@@ -46,6 +44,9 @@ Et puis il existe également des autorisations spéciales : <br>
 
 ```
 chmod 777 filename
+```
+
+```
 chmod u+rwx filename
 ```
 
@@ -70,17 +71,19 @@ ls -lhF
 
 ```
 chmod 766 filename
-chmod g-x filename
+```
+
+```
+chmod g-x,o-x filename
 ```
 
 **u=user, g=group, o=other** <br>
-La 2ème commande doit être répétée pour chaque ensemble. <br>
+La 2ème commande doit être répétée pour chaque ensemble.
 
 Exemples :
 
 ```
-chmod g-x info.txt
-chmod o-x info.txt
+chmod g-x,o-x info.txt
 ```
 
 ```
