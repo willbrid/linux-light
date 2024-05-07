@@ -52,7 +52,7 @@ Syntaxe 
 whatis command
 ```
  
- Exemple
+Exemple
 
 ```
 whatis ls
