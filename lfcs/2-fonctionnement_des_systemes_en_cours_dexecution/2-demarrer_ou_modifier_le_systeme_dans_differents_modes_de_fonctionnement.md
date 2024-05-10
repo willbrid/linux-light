@@ -2,7 +2,7 @@
 
 Comment configurer une machine Linux pour démarrer en mode graphique ou texte ?
 
-Le niveau d'exécution (runlevel) de Linux contrôle le choix des processus ou services qui sont démarrés automatiquement par le système (ou, plus exactement, par Init). Le niveau d'exécution est désigné par un chiffre de 0 à 6 ou la lettre S. Les niveaux d'exécution 0, 6 et S sont réservés respectivement à l'extinction du système, au redémarrage et au mode simple utilisateur.
+Le **niveau d'exécution** (**runlevel**) de linux contrôle le choix des processus ou services qui sont démarrés automatiquement par le système (ou, plus exactement, par **Init**). Le **niveau d'exécution** est désigné par un chiffre de **0** à **6** ou la lettre S. Les niveaux d'exécution **0**, **6** et **S** sont réservés respectivement à l'extinction du système, au redémarrage et au mode simple utilisateur.
 
 |                  | SysVinit    | Systemd                             |
 | :---             |    :----:   |          ---:                       |
@@ -29,7 +29,7 @@ systemctl get-default
 - Changer le niveau d'exécution par défaut en **multi-user**
 
 Avec **SysVinit**, on modifie le fichier **/etc/inittab** en remplaçant **initdefault** par **id:3:initdefault:** .
-<br><br>
+
 Avec **Systemd**, on exécute la commande 
 
 ```
