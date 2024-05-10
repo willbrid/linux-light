@@ -10,6 +10,8 @@ Il s’agit de la commande incontournable pour arrêter, mettre hors tension ou 
 - **shutdown -H <TIME>** : Arrête toutes les activités du processeur à l'heure spécifiée.
 - **shutdown -P <TIME>** : Arrête le système d'exploitation et envoie une commande pour éteindre la machine à l'heure spécifiée.
 
+La chaîne d'heure peut être au format **« hh:mm »** pour les **heures/minutes** spécifiant l'heure à laquelle exécuter l'arrêt, spécifiée au format d'horloge **24 heures**. Alternativement, il peut s'agir de la syntaxe **"+m"** faisant référence au **nombre de minutes** spécifié dans **m** à partir de maintenant. **"now"** est un alias pour "+0", c'est-à-dire pour déclencher un **arrêt immédiat**. Si aucun argument temporel n'est spécifié, **"+1"** est implicite.
+
 ```
 shutdown -r +2
 ```
