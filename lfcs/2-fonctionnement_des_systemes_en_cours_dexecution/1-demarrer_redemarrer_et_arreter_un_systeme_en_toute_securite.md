@@ -24,6 +24,12 @@ shutdown -H +5
 shutdown -P +7
 ```
 
+Nous pouvons annuler l'action du processus **shutdown** en cours d'exécution avec la commande 
+
+```
+shutdown -c
+```
+
 ### reboot
 
 Cette commande remplit la même fonction que **shutdown -r** , mais peut également être utilisé pour arrêter ou mettre hors tension le serveur lorsque les paramètres corrects sont envoyés.
