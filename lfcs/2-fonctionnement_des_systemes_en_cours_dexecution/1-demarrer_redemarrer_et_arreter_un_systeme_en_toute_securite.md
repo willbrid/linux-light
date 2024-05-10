@@ -4,7 +4,7 @@ Une machine Linux nécessite une maintenance pour les mises à jour du matériel
 
 ### shutdown
 
-Il s’agit de la commande incontournable pour arrêter, mettre hors tension ou redémarrer une machine. Il fonctionne sur les systèmes d'exploitation basés sur System 5 et systemd.
+Il s’agit de la commande incontournable pour arrêter, mettre hors tension ou redémarrer une machine. Il fonctionne sur les systèmes d'exploitation basés sur **System 5** et **systemd**.
 
 - **shutdown -r <TIME>** : Redémarre le serveur à l'heure spécifiée
 - **shutdown -H <TIME>** : Arrête toutes les activités du processeur à l'heure spécifiée.
