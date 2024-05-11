@@ -2,7 +2,7 @@
 
 L'un des aspects du rôle d'administrateur système est de maintenir la santé du système. Quels journaux doivent être examinés lors du dépannage ?
 
-En tant qu'administrateur système, il peut nous être demandé de surveiller de manière proactive un serveur, d'enquêter sur une application problématique ou de vérifier l'accès au système. Les journaux du système principal se trouvent dans **/var/log** sur les systèmes basés sur **Debian** et **RedHat**, cependant les fichiers journaux de clés sont nommés différemment.
+En tant qu'administrateur système, il peut nous être demandé de surveiller de manière proactive un serveur, d'enquêter sur une application problématique ou de vérifier l'accès au système. Les journaux du système principal se trouvent dans **/var/log** sur les systèmes basés sur **Debian** et **RedHat**, cependant les fichiers journaux clés sont nommés différemment.
 
 ### Systèmes basés sur Debian/Ubuntu
 
@@ -49,7 +49,7 @@ sudo less /var/log/messages
 ```
 
 ```
-sudo less /var/log/syslog | grep acpi
+sudo less /var/log/messages | grep acpi
 ```
 
 ```
