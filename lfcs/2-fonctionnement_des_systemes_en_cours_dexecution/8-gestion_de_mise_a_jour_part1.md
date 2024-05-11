@@ -1,7 +1,7 @@
 # Mettre à jour et gérer les logiciels pour fournir les fonctionnalités et la sécurité requises, partie 1 - Ubuntu/Debian
 
 En tant qu'administrateur système, maintenir la stabilité et la sécurité est une tâche essentielle. Les mises à jour du système et les correctifs constituent un élément clé de cet objectif.
-<br><br>
+
 Les distributions **Debian/Ubuntu** offrent plusieurs outils pour maintenir le système d'exploitation et les applications à jour, afin de maintenir la santé du système.
 
 ### dpkg
@@ -11,12 +11,18 @@ Les distributions **Debian/Ubuntu** offrent plusieurs outils pour maintenir le s
 - N'effectue pas de contrôles de dépendance
 - Syntaxe :
 
+Installation d'un package
 ```
-# Installation d'un package
 dpkg -i filename.deb
-# Liste des paquets installés
+```
+
+Liste des paquets installés
+```
 dpkg -l
-# Désinstallation d'un package
+```
+
+Désinstallation d'un package
+```
 dpkg -r pkgname
 ```
 
@@ -30,7 +36,7 @@ dpkg -l zip
 dpkg -l unzip
 ```
 
-Utilisons la commande dpkg pour afficher les informations sur le package **tzdata**
+Utilisons la commande **dpkg** pour afficher les informations sur le package **tzdata**
 
 ```
 dpkg -s tzdata
@@ -50,14 +56,18 @@ dpkg-reconfigure tzdata
 - Peut être utilisé avec les options de ligne de commande mais plus couramment utilisé pour son interface
 - Syntaxe :
 
+Installation d'un package
 ```
-# Installation d'un package
 aptitude install pkgname
+```
 
-# Liste des informations sur un package
+Liste des informations sur un package
+```
 aptitude show pkgname
+```
 
-# Désinstallation d'un package
+Désinstallation d'un package
+```
 aptitude remove pkgname
 ```
 
@@ -74,14 +84,18 @@ sudo aptitude
 - Gère les contrôles de dépendance
 - Syntaxe :
 
+Installation d'un package
 ```
-# Installation d'un package
 apt install pkgname
+```
 
-# Liste des informations sur un package
+Liste des informations sur un package
+```
 apt -cache show pkgname
+```
 
-# Désinstallation d'un package
+Désinstallation d'un package
+```
 apt purge pkgname
 ```
 
