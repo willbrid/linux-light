@@ -1,8 +1,8 @@
 # Planifier des tâches à exécuter à une date et une heure définies
 
 En tant qu'administrateurs système, nous devrons peut-être exécuter une commande ou un script à intervalles réguliers. Utilisons **cron** pour planifier ces tâches pour nous.
-<br><br>
-Le démon cron utilise les entrées du fichier crontab pour gérer les activités récurrentes telles que l'effacement des répertoires, la création de sauvegardes, la génération de rapports ou la mise à jour des configurations.
+
+Le démon **cron** utilise les entrées du fichier crontab pour gérer les activités récurrentes telles que l'effacement des répertoires, la création de sauvegardes, la génération de rapports ou la mise à jour des configurations.
 
 ### Syntaxe de contenu crontab
 
@@ -16,7 +16,7 @@ Le démon cron utilise les entrées du fichier crontab pour gérer les activité
 |   |   |
 |   |   |   +- - - - - - - mois (1 - 12)
 |   |   |   |
-|   |   |   |   +- - - - jour of la semaine (0 - 6) (Dimanche = 0)
+|   |   |   |   +- - - - jour de la semaine (0 - 6) (Dimanche = 0)
 |   |   |   |   |
 |   |   |   |   |
 *   *   *   *   *   commande à exécuter
