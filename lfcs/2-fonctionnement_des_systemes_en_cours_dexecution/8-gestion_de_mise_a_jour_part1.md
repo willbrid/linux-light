@@ -49,9 +49,9 @@ dpkg-reconfigure tzdata
 ```
 
 Quelques options de **dpkg** :
-- **-i** : cette option permet d'installe un paquet **deb**
-- **-l** : cette option permet de lister les paquets
-- **-r** : cette option permet de supprimer un paquet
+- **-i** : cette option permet d'installer un paquet **deb**
+- **-l** : cette option permet de lister ou vérifier les paquets installés
+- **-r** : cette option permet de supprimer un paquet installé
 - **-s** : cette option permet d'afficher les informations détaillées sur un paquet
 
 ### aptitude
