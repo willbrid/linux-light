@@ -7,11 +7,11 @@ Les distributions **Debian/Ubuntu** offrent plusieurs outils pour maintenir le s
 ### dpkg
 
 - Gestionnaire de paquets pour les systèmes basés sur Debian
-- Outil de bas niveau utilisé pour installer, supprimer et fournir des informations sur les packages **.deb** téléchargés
+- Outil de bas niveau utilisé pour installer, supprimer et fournir des informations sur les paquets **.deb** téléchargés
 - N'effectue pas de contrôles de dépendance
 - Syntaxe :
 
-Installation d'un package
+Installation d'un paquet
 ```
 dpkg -i filename.deb
 ```
@@ -21,7 +21,7 @@ Liste des paquets installés
 dpkg -l
 ```
 
-Désinstallation d'un package
+Désinstallation d'un paquet
 ```
 dpkg -r pkgname
 ```
@@ -36,7 +36,7 @@ dpkg -l zip
 dpkg -l unzip
 ```
 
-Utilisons la commande **dpkg** pour afficher les informations sur le package **tzdata**
+Utilisons la commande **dpkg** pour afficher les informations sur le paquet **tzdata**
 
 ```
 dpkg -s tzdata
@@ -48,25 +48,31 @@ Utilisons **dpkg-reconfigure** pour ajuster le fuseau horaire sur **Africa/Doual
 dpkg-reconfigure tzdata
 ```
 
+Quelques options de **dpkg** :
+- **-i** : cette option permet d'installe un paquet **deb**
+- **-l** : cette option permet de lister les paquets
+- **-r** : cette option permet de supprimer un paquet
+- **-s** : cette option permet d'afficher les informations détaillées sur un paquet
+
 ### aptitude
 
 - Interface de haut niveau avec le système de paquets Debian
-- Fournit une interface frontale en ligne de commande pour installer, mettre à niveau, supprimer et fournir des informations sur les packages **.deb**
+- Fournit une interface frontale en ligne de commande pour installer, mettre à niveau, supprimer et fournir des informations sur les paquets **.deb**
 - Gère les contrôles de dépendance
 - Peut être utilisé avec les options de ligne de commande mais plus couramment utilisé pour son interface
 - Syntaxe :
 
-Installation d'un package
+Installation d'un paquet
 ```
 aptitude install pkgname
 ```
 
-Liste des informations sur un package
+Liste des informations sur un paquet
 ```
 aptitude show pkgname
 ```
 
-Désinstallation d'un package
+Désinstallation d'un paquet
 ```
 aptitude remove pkgname
 ```
@@ -80,36 +86,36 @@ sudo aptitude
 ### apt/apt-get
 
 - Interface de haut niveau avec le système de paquets Debian
-- Fournit une interface de ligne de commande pour installer, mettre à niveau, supprimer et fournir des informations sur les packages **.deb**
+- Fournit une interface de ligne de commande pour installer, mettre à niveau, supprimer et fournir des informations sur les paquets **.deb**
 - Gère les contrôles de dépendance
 - Syntaxe :
 
-Installation d'un package
+Installation d'un paquet
 ```
 apt install pkgname
 ```
 
-Liste des informations sur un package
+Liste des informations sur un paquet
 ```
 apt -cache show pkgname
 ```
 
-Désinstallation d'un package
+Désinstallation d'un paquet
 ```
 apt purge pkgname
 ```
 
 |        apt       | apt-get                   | description                                                            |
 | :---             | :----:                    | ---:                                                                   |
-| apt install      | apt-get install           | installer un package                                                   |
-| apt remove       | apt-get remove            | désinstaller un package                                                |
-| apt purge        | apt-get purge             | désinstaller un package avec ses configurations                        |
+| apt install      | apt-get install           | installer un paquet                                                   |
+| apt remove       | apt-get remove            | désinstaller un paquet                                                |
+| apt purge        | apt-get purge             | désinstaller un paquet avec ses configurations                        |
 | apt update       | apt-get update            | actualiser l'index du référentiel                                      |
 | apt upgrade      | apt-get upgrade           | effectuer les mises à niveau                                           |
-| apt autoremove   | apt-get autoremove        | supprimer les packages indésirables                                    |
-| apt full-upgrade | apt-get dist-upgrade      | mettre à niveau les packages avec gestion automatique des dépendances  |
+| apt autoremove   | apt-get autoremove        | supprimer les paquets indésirables                                    |
+| apt full-upgrade | apt-get dist-upgrade      | mettre à niveau les paquets avec gestion automatique des dépendances  |
 | apt search       | apt-cache search          | rechercher un programme                                                |
-| apt show         | apt-cache show            | afficher les détails d'un package                                      |
+| apt show         | apt-cache show            | afficher les détails d'un paquet                                      |
 
 
 ```
