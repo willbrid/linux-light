@@ -1,8 +1,8 @@
 # Gérer le processus de démarrage et les services (dans la configuration des services)
 
 Les services Linux se lancent au démarrage du système. Les administrateurs système devront peut-être démarrer/arrêter et activer/désactiver divers services pour maintenir la stabilité du système.
-<br><br>
-Un service Linux est une application ou un ensemble d'applications configuré pour être lancé au démarrage du système et exécuté en arrière-plan. Sur les distributions Linux modernes, les services sont gérés par **systemctl**. <br>
+
+Un service Linux est une application ou un ensemble d'applications configuré pour être lancé au démarrage du système et exécuté en arrière-plan. Sur les distributions Linux modernes, les services sont gérés par **systemctl**.
 
 Exemple avec le service **cron**
 
