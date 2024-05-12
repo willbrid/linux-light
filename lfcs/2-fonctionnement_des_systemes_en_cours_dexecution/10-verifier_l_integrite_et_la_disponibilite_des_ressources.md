@@ -1,7 +1,7 @@
 # Vérifier l'intégrité et la disponibilité des ressources
 
 Les performances et la stabilité sont au cœur d'un système Linux. Un administrateur système doit être capable de surveiller ou de dépanner ces ressources pour garantir la santé du système.
-<br>
+
 Que sont exactement les ressources système ? Les ressources système sont des composants d'un système d'ordinateur et incluent la mémoire (RAM), les disques durs, le processeur et les E/S réseau (entrée/sortie), pour n'en citer que quelques-uns.
 
 ### Mémoire (RAM)
@@ -47,7 +47,7 @@ sudo tune2fs -c 1 /dev/sdb
 ```
 
 Le paramètre **-c** est le nombre de fois que le système de fichiers a été monté. Si le système de fichiers a été monté plus d'une fois, il exécutera la vérification du système de fichiers au prochain redémarrage.
-<br>
+
 Pour désactiver cette planification, nous exécutons
 
 ```
