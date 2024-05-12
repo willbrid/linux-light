@@ -4,7 +4,7 @@ L'automatisation des tâches n'est pas toujours simple. Dans certains cas, un sc
 
 ### La boucle For
 
-Une boucle **for** se répétera un nombre spécifique de fois, déterminé par le script ou par la saisie de l'utilisateur. <br>
+Une boucle **for** se répétera un nombre spécifique de fois, déterminé par le script ou par la saisie de l'utilisateur.
 
 Exemples
 
@@ -55,7 +55,7 @@ done
 
 ### La boucle while
 
-Une boucle **while** se répétera si la condition évaluée est VRAIE. Si l'évaluation échoue lors de la première vérification, la boucle ne démarrera jamais. <br>
+Une boucle **while** se répétera si la condition évaluée est VRAIE. Si l'évaluation échoue lors de la première vérification, la boucle ne démarrera jamais.
 
 Exemples
 
@@ -74,7 +74,7 @@ timer=0
 while [ $timer -le 5 ]
 do
   echo "Count Up: " $timer
-  ((timer ++))
+  ((timer++))
 done
 ```
 
