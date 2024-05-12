@@ -1,7 +1,7 @@
 # Modifier les paramètres d'exécution du kernel, persistants et non persistants
 
 Sous Linux, tout est un fichier. En tant qu'administrateur système, nous pouvons contrôler les paramètres du noyau de manière temporaire ou permanente en modifiant les fichiers de configuration.
-<br><br>
+
 Un paramètre de kernel est une chaîne de texte interprétée par le kernel du système pour contrôler la manière dont les périphériques et les systèmes interagissent avec le système d'exploitation.
 
 ### Changement non persistant
@@ -9,11 +9,13 @@ Un paramètre de kernel est une chaîne de texte interprétée par le kernel du 
 Les modifications non persistantes sont temporaires et seront réinitialisées une fois le système redémarré. Après avoir apporté des modifications, exécutons la commande ci-dessous pour charger la nouvelle configuration.
 
 ```
-sysctl -p
+sudo sysctl -p
 ```
 
-L'un des avantages d'une modification non persistante est qu'elle nous permet de tester et d'évaluer une nouvelle configuration sans redémarrer le système. <br>
-Nous pouvons utiliser la commande de contrôle du système (**sysctl**) pour afficher les paramètres, ainsi que pour apporter des modifications temporaires aux paramètres. Nous pouvons également modifier manuellement les fichiers de configuration pour apporter une modification temporaire. <br>
+L'un des avantages d'une modification non persistante est qu'elle nous permet de tester et d'évaluer une nouvelle configuration sans redémarrer le système.
+
+Nous pouvons utiliser la commande de contrôle du système (**sysctl**) pour afficher les paramètres, ainsi que pour apporter des modifications temporaires aux paramètres. Nous pouvons également modifier manuellement les fichiers de configuration pour apporter une modification temporaire.
+
 Pour afficher la configuration actuelle des paramètres :
 
 ```
@@ -27,8 +29,9 @@ sudo sysctl dev.cdrom.autoclose
 ```
 
 Nous voyons la valeur **1** à ce paramètre, cela signifie que la fonctionnalité **cdrom.autoclose** est activée. 
-<br><br>
-Les paramètres du kernel sont également stockés sous forme de fichiers sur le système. Nous pouvons trouver les fichiers de paramètres dans le répertoire **/proc/sys**. <br>
+
+Les paramètres du kernel sont également stockés sous forme de fichiers sur le système. Nous pouvons trouver les fichiers de paramètres dans le répertoire **/proc/sys**.
+
 Nous pouvons constater que le paramètre **autoclose** se trouve dans le repertoire **/proc/sys/dev/cdrom**.
 
 ```
@@ -48,7 +51,7 @@ cat /proc/sys/dev/cdrom/autoclose
 Nous pouvons aussi modifier ce paramètre directement dans le fichier
 
 ```
-echo 0 > /proc/sys/dev/cdrom/autoclose
+sudo echo 0 > /proc/sys/dev/cdrom/autoclose
 ```
 
 ou avec un éditeur de fichier tel que **vim**
@@ -74,7 +77,7 @@ sudo vi /etc/sysctl.d/10-network-security.conf
 ```
 
 ```
-# Added by willbrid to enable IPv4 Forwarding
+# Added by willbrid administrator to enable IPv4 Forwarding
 net.ipv4.ip_forward=1
 ```
 
