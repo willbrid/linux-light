@@ -1,7 +1,7 @@
 # Créer, supprimer et modifier des groupes locaux et des adhésions à des groupes
 
 La gestion de l'accès des utilisateurs est l'une des nombreuses tâches importantes pour un administrateur système Linux. L’utilisation de groupes peut contribuer à rendre cette tâche beaucoup plus facile.
-<br>
+
 La gestion de groupe est une autre activité courante, mais critique, que nous effectuerons en tant qu'administrateur système.
 
 ### Ajouter un groupe à notre système
@@ -16,9 +16,12 @@ groupadd newgroup
 
 - **addgroup**
 
+Interactif
 ```
-# interactif
 addgroup
+```
+
+```
 addgroup newgroup
 ```
 
@@ -30,10 +33,10 @@ addgroup newgroup
 gpasswd groupname
 ```
 
---- Utilisé pour définir un mot de passe pour un groupe <br>
+--- Utilisé pour définir un mot de passe pour un groupe
 
-Exemple
-<br>
+**Exemple**
+
 Listons l'ensemble des groupes d'un système
 
 ```
@@ -41,14 +44,18 @@ cat /etc/group
 ```
 
 Les informations contenues dans le fichier **/etc/group** : la première colonne est le **nom du groupe**, la deuxième colonne n'est plus utilisée et sera un x, la troisième colonne est le **GUID** du groupe et la dernière colonne est une liste des utilisateurs membres du groupe.
-<br><br>
-Ajoutons le groupe **group1**
+
+Ajoutons les groupes **group1** et **group2**
 
 ```
 sudo groupadd group1
 ```
 
-Vérifions la présence du group **group1**
+```
+sudo groupadd group2
+```
+
+Vérifions la présence des groupes **group1** et **group2**
 
 ```
 cat /etc/group | grep group1
@@ -57,7 +64,7 @@ cat /etc/group | grep group1
 Ajoutons le groupe **group2** (**addgroup** disponible sous ubuntu)
 
 ```
-addgroup group2
+sudo addgroup group2
 ```
 
 Listons tous les groupes auxquels l'utilisateur courant appartient
@@ -92,8 +99,8 @@ Connectons nous au groupe **group1**
 newgrp group1
 ```
 
-La commande est utilisée pour modifier l'ID de groupe actuel lors d'une session de connexion. Si le mot de passe a été défini alors l'on sera amené à entrer ce mot de passe.
-<br>
+La commande est utilisée pour modifier l'**ID de groupe actuel** lors d'une session de connexion. Si le mot de passe a été défini alors l'on sera amené à entrer ce mot de passe.
+
 Créons un fichier **test1** et affichons son groupe
 
 ```
@@ -102,7 +109,7 @@ ls -l test1
 ```
 
 Nous constatons le fichier **test1** appartient au groupe **group1**.
-<br>
+
 Quittons de la session du groupe **group1**
 
 ```
@@ -118,7 +125,7 @@ usermod -aG groupname useraccount
 ```
 
 --- Ajoute un utilisateur à un groupe <br>
---- a = ajouter, G = groupe <br>
+--- a = ajouter, G = groupe
 
 - **gpasswd**
 
@@ -126,10 +133,10 @@ usermod -aG groupname useraccount
 gpasswd -d username groupname
 ```
 
---- Supprime un utilisateur d'un groupe <br>
+--- Supprime un utilisateur d'un groupe 
 
-Exemple
-<br>
+**Exemple**
+
 Ajoutons l'utilisateur **sshd** au groupe **group1**
 
 ```
@@ -154,7 +161,7 @@ Enlevons l'utilisateur **sshd** au groupe **group1**
 sudo gpasswd -d sshd group1
 ```
 
-**NB**: On peut aussi modifier le groupe d'un utilisateur directement dans le fichier **/etc/group** graceà un éditeur tel que : **vim**. Mais cette méthode n'est pas récommandée.
+**NB**: On peut aussi modifier le groupe d'un utilisateur directement dans le fichier **/etc/group** grace à un éditeur tel que : **vim**. Mais cette méthode n'est pas récommandée.
 
 ### Supprimer un groupe de notre système
 
@@ -173,10 +180,10 @@ delgroup groupname
 ```
 
 --- Utilitaire de haut niveau, non disponible sur toutes les distributions <br>
---- Peut être exécuté de manière interactive <br>
+--- Peut être exécuté de manière interactive
 
-Exemple
-<br>
+**Exemple**
+
 Supprimons le groupe **group1**
 
 ```
