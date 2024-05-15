@@ -10,7 +10,7 @@ Variables disponibles pour la session en cours uniquement
 
 - **Utilisateur (User)**
 
-Variables définies pour l'utilisateur spécifique uniquement
+Variables définies uniquement pour un utilisateur spécifique
 
 - **Système (System)**
 
@@ -102,9 +102,9 @@ vi ~/.bashrc
 export NEW_VAR="super cool"
 ```
 
-Pour appliquer le changement soit : <br>
---- on déconnecte et se reconnecte du serveur <br>
---- on exécute la commande
+Pour appliquer le changement : <br>
+--- soit on se déconnecte et se reconnecte du serveur <br>
+--- soit on exécute la commande
 
 ```
 source ~/.bashrc
@@ -140,12 +140,16 @@ sudo vi /etc/environment
 NEWVAR="super cool genial"
 ```
 
-Pour appliquer le changement soit : <br>
---- on déconnecte et se reconnecte du serveur <br>
---- on exécute la commande
+Pour appliquer le changement : <br>
+--- soit on se déconnecte et se reconnecte du serveur <br>
+--- soit on exécute la commande
 
 ```
 source /etc/environment
+```
+
+```
+echo $NEWVAR
 ```
 
 Pour supprimer cette variable, **NEWVAR**, on édite le fichier **/etc/environment** en supprimant la ligne de définition de cette variable, puis on applique les commandes :
