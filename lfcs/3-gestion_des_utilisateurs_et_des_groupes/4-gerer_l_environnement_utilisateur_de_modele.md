@@ -1,4 +1,4 @@
-# Gérer l'environnement utilisateur de modèle
+# Gérer l'environnement modèle utilisateur
 
 De nombreuses tâches et responsabilités occupent les administrateurs système Linux. L'utilisation de modèles peut nous faire gagner du temps lors de la configuration de nouveaux utilisateurs sur nos systèmes.
 
@@ -55,7 +55,7 @@ sudo passwd testuser
 - Vérifions le contenu du repertoire home de l'utilisateur **testuser**
 
 ```
-sudo ls -alh /home/testuser4/
+sudo ls -alh /home/testuser/
 ```
 
 Nous constatons la présence de tous les fichiers et repertoires créés
