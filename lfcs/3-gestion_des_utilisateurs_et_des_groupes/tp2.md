@@ -2,7 +2,7 @@
 
 ### Confirmer que notre utilisateur vagrant est dans le groupe wheel sous rocky ou sudo sous ubuntu
 
-Utilisons les commandes id et groups pour confirmer l'adhésion au groupe **wheel**
+Utilisons les commandes **id** et **groups** pour confirmer l'adhésion au groupe **wheel**
 
 ```
 id vagrant
@@ -14,24 +14,25 @@ groups
 
 ### Définir le groupe wheel sous rocky ou sudo sous ubuntu comme groupe propriétaire de /usr/bin/sudo et /usr/bin/su
 
-
 ```
 sudo -i
 ```
 
+Sous rocky
 ```
-# Sous rocky
-chgrp wheel /usr/bin/sudo /usr/bin/su
+sudo chgrp wheel /usr/bin/sudo /usr/bin/su
+```
 
-# Sous ubuntu
-chgrp sudo /usr/bin/sudo /usr/bin/su
+Sous ubuntu
+```
+sudo chgrp sudo /usr/bin/sudo /usr/bin/su
 ```
 
 ### Permettre à l'utilisateur root et au groupe wheel sous rocky ou sudo sous ubuntu d'exécuter sudo et su
 
 
 ```
-chmod 4110 /usr/bin/sudo /usr/bin/su
+sudo chmod 4110 /usr/bin/sudo /usr/bin/su
 ```
 
 Nous pouvons confirmer en exécutant 
@@ -46,12 +47,14 @@ ls -l /usr/bin/su
 
 ### Vérifier que /etc/sudoers autorise le groupe wheel sous rocky ou sudo sous ubuntu à utiliser sudo
 
+Sous rocky
 ```
-# Sous rocky
-grep wheel /etc/sudoers
+sudo grep wheel /etc/sudoers
+```
 
-# Sous ubuntu
-grep sudo /etc/sudoers
+Sous ubuntu
+```
+sudo grep sudo /etc/sudoers
 ```
 
 Si les lignes commençant **%wheel** sous rocky ou **%sudo** sous ubuntu sont commentées alors utilisons la commande **visudo** pour ouvrir le fichier **/etc/sudoers** et les décommenter
@@ -66,14 +69,14 @@ visudo
 vi /etc/pam.d/su
 ```
 
+Sous rocky
 ```
-# Sous rocky
 ...
 auth            required        pam_wheel.so use_uid
 ```
 
+Sous ubuntu
 ```
-# Sous ubuntu
 ...
 auth            required        pam_wheel.so group=sudo
 ```
@@ -82,11 +85,13 @@ auth            required        pam_wheel.so group=sudo
 
 Créons un utilisateur **sysadmin** appartenant au groupe **wheel** sous rocky ou **sudo** sous ubuntu
 
+Sous rocky
 ```
-# Sous rocky
 useradd -G wheel sysadmin
+```
 
-# Sous ubuntu
+Sous ubuntu
+```
 useradd -G sudo sysadmin
 ```
 
@@ -120,8 +125,14 @@ exit
 
 Créons un utilisateur **sysuser** appartenant au groupe **wheel** sous rocky ou **sudo** sous ubuntu
 
+Sous rocky
 ```
-useradd sysuser
+useradd -G wheel sysuser
+```
+
+Sous ubuntu
+```
+useradd -G sudo sysuser
 ```
 
 Définissons le mot de passe **cooltest** de l'utilisateur **sysuser**
