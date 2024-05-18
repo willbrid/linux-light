@@ -1,6 +1,7 @@
 # Acheminer statiquement le trafic IP
 
-Parfois, il est nécessaire de contrôler le chemin emprunté par une requête réseau. En tant qu'administrateur système Linux, nous devons peut-être créer des routes statiques pour gérer le trafic réseau. <br>
+Parfois, il est nécessaire de contrôler le chemin emprunté par une requête réseau. En tant qu'administrateur système Linux, nous devons peut-être créer des routes statiques pour gérer le trafic réseau.
+
 Un réseau est une autoroute conçue pour acheminer les paquets d’informations vers leur destination. Parfois, un administrateur Linux doit fermer une route en raison de problèmes ou de travaux.
 
 - Affichons la configuration réseau de notre serveur
@@ -18,13 +19,11 @@ ip route show
 - Installons et utilisons la commande **traceroute** pour voir comment cette machine accède à l'un des serveurs DNS de Google **8.8.0.0**
 
 Sous Ubuntu
-
 ```
 sudo apt install traceroute
 ```
 
 Sous Rocky linux
-
 ```
 sudo dnf install traceroute
 ```
@@ -65,7 +64,7 @@ sudo ip route add 8.8.0.0/16 proto static metric 10 via inet 192.168.56.110 dev 
 
 - **ip route add** : c'est la commande pour ajouter une route IP.
 - **8.8.0.0/16** : c'est l'adresse réseau et le masque de sous-réseau qui spécifient la plage d'adresses IP à atteindre via cette route. Dans ce cas, c'est le réseau 8.8.0.0 avec un masque de sous-réseau de 16 bits, ce qui signifie que les adresses IP comprises entre 8.8.0.0 et 8.8.255.255 sont incluses.
-- **proto static** : cela spécifie le protocole utilisé pour cette route. Dans ce cas, c'est statique, ce qui signifie que cette route est définie manuellement par l'utilisateur.
+- **proto static** : cela spécifie le protocole utilisé pour cette route. Dans ce cas, c'est **static**, ce qui signifie que cette route est définie manuellement par l'utilisateur.
 - **metric 10** : c'est la métrique associée à cette route. La métrique est utilisée par le système d'exploitation pour déterminer la priorité des routes lorsqu'il y a plusieurs chemins possibles vers une destination. Une métrique inférieure indique une priorité plus élevée. Dans ce cas, la métrique est définie à 10.
 - **via inet 192.168.56.110** : c'est l'adresse IP de la passerelle à utiliser pour atteindre le réseau spécifié. L'adresse IP de la passerelle est **192.168.56.110**.
 - **dev enp0s8** : c'est le nom de l'interface réseau sortante à utiliser pour acheminer le trafic vers la passerelle spécifiée. Dans ce cas, c'est l'interface réseau **enp0s8**.
