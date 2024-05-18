@@ -1,7 +1,7 @@
 # Configurer la mise en réseau et la résolution du nom d'hôte de manière statique ou dynamique
 
 En tant qu'administrateur Linux, nous devons être capable de gérer manuellement la configuration réseau de nos systèmes afin de maintenir les serveurs en ligne et accessibles à tout moment.
-<br>
+
 Les systèmes Linux partagent désormais des réseaux avec les systèmes Windows, les systèmes macOS et les appareils matériels, mais doivent désormais également faire face aux appareils mobiles (tablettes et téléphones) ainsi qu'aux appareils intelligents. Linux doit être aussi flexible que possible, nous devons donc être capable de prendre en charge les adresses IP dynamiques et statiques ainsi que la résolution DNS.
 
 ### Distributions anciennes
@@ -10,7 +10,7 @@ Les systèmes Linux partagent désormais des réseaux avec les systèmes Windows
 - Les interfaces pouvaient se trouver dans le fichier **/etc/network/interfaces** ou individuellement dans le sous-répertoire **/etc/network/interfaces.d/**.
 
 Exemple avec le système ubuntu 16.04
-<br>
+
 Afficher les détails sur les interfaces réseau
 
 ```
@@ -62,7 +62,7 @@ iface ens5 inet6 dhcp
 
 ### Distributions Récentes
 
-- Sous Ubuntu 20.04
+- **Sous Ubuntu 20.04**
 
 Afficher les détails sur les interfaces réseau
 
@@ -137,7 +137,7 @@ Après configuration, l'on peut redemarrer en toute sécurité l'interface confi
 sudo ip link set enp0s8 down && sudo ip link set enp0s8 up
 ```
 
-- Sous Rocky Linux 8
+- **Sous Rocky Linux 8**
 
 Afficher les détails sur les interfaces réseau
 
