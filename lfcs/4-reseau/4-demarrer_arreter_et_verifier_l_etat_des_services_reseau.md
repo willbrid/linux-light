@@ -13,7 +13,7 @@ Si nous examinons cette sortie, nous pouvons voir des éléments tels que :
 - **Proto** : Le protocole utilisé par cette prise (par exemple, TCP ou UDP).
 - **RECV-Q** : La file d’attente de réception. Ce sont des octets entrants qui ont été reçus et sont tamponnés, en attente du processus local qui utilise cette connexion pour la lire et la consommer.
 - **Send-Q** : La file d’attente d’envoi. Cela montre les octets prêts à être envoyés de la file d’attente d’envoi.
-- **Adresse locale** : Les détails de l’adresse de destination locale de la connexion. La valeur par défaut est pour NetStat pour afficher le nom d’hôte local pour l’adresse et le nom du service du port.
+- **Adresse locale** : Les détails de l’adresse de destination locale de la connexion.
 - **Adresse distante** : L’adresse et le numéro de port de l'origine de la connexion.
 - **Etat de la connexion** : L’état de la prise locale **Established**, **Listen**, **Closed**,... Pour les sockets UDP, ceci est généralement vide.
 
