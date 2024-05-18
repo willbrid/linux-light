@@ -19,7 +19,7 @@ sudo iptables --flush
 - Effectuons un ping avec 3 paquets depuis notre vm ubuntu vers notre vm Rocky
 
 ```
-ping c3 192.168.56.110
+ping -c3 192.168.56.110
 ```
 
 - Appliquons la règle **iptables** pour rejeter les requêtes **ICMP** à destination de notre serveur **Rocky** sur l'interface **enp0s8** portant notre adresse IP **192.168.56.110**
@@ -37,10 +37,10 @@ sudo iptables -L
 - Effectuons à nouveau un ping avec 3 paquets depuis notre vm **Ubuntu** vers notre vm **Rocky**
 
 ```
-ping c3 192.168.56.110
+ping -c3 192.168.56.110
 ```
 
-Nous constaterons un message d'erreur "**Destination Port Unreachable**". <br>
+Nous constaterons un message d'erreur "**Destination Port Unreachable**".
 
 - Effaçons notre règle précédemment configurée sur le serveur **Rocky**
 
@@ -59,7 +59,7 @@ sudo iptables -A INPUT --protocol icmp --in-interface enp0s8 -j DROP
 - Effectuons à nouveau un ping avec 3 paquets depuis notre vm **Ubuntu** vers notre vm **Rocky**
 
 ```
-ping c3 192.168.56.110
+ping -c3 192.168.56.110
 ```
 
 Nous constaterons qu'aucun retour n'est renvoyé par le serveur **Rocky**.
