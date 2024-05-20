@@ -1,10 +1,10 @@
 # Configurer les alias d'Email
 
-En tant qu'administrateur système Linux, nous pouvons simplifier la gestion des e-mails du système d'un serveur Linux en configurant des alias pour le système de messagerie de notre choix. Ainsi les **alias** nous éviteront de gérer plusieurs boîtes aux lettres dans les scénario où nous souhaiterons envoyer une copie de tous les e-mails reçus d'une adresse à une autre, ou envoyer des e-mails de compte de service à un utilisateur spécifique.
+En tant qu'administrateur système Linux, nous pouvons simplifier la gestion des **e-mails** du système d'un serveur Linux en configurant des alias pour le système de messagerie de notre choix. Ainsi les **alias** nous éviteront de gérer plusieurs boîtes aux lettres dans les scénario où nous souhaiterons envoyer une copie de tous les **e-mails** reçus d'une adresse à une autre, ou envoyer des **e-mails** de compte de service à un utilisateur spécifique.
 
 Ici nous prendrons un exemple en créeant un alias depuis un serveur smtp **postfix**.
 
-**Postfix** est un logiciel de serveur de messagerie open source largement utilisé sous Linux et d'autres systèmes Unix. Il est principalement utilisé pour gérer l'acheminement, la livraison et le transfert des e-mails sur un système informatique.
+**Postfix** est un logiciel de serveur de messagerie open source largement utilisé sous Linux et d'autres systèmes Unix. Il est principalement utilisé pour gérer l'acheminement, la livraison et le transfert des **e-mails** sur un système informatique.
 
 - Installation de **postfix**
 
