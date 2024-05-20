@@ -26,7 +26,7 @@ ls -alh /var/mail
 
 ### Installation et configuration de Dovecot
 
-**Dovecot** est un logiciel serveur de messagerie open source conçu pour gérer l'accès aux boîtes aux lettres des utilisateurs sur un serveur. Il est couramment utilisé en conjonction avec d'autres logiciels de messagerie tels que Postfix pour offrir une solution de messagerie complète sur les systèmes Linux et Unix-like. Il prend en charge les protocoles **IMAP** (**Internet Message Access Protocol**) et **POP3** (**Post Office Protocol version 3**), permettant aux utilisateurs d'accéder à leurs e-mails à partir de clients de messagerie tels que **Thunderbird**, **Outlook**, ou **Mail**.
+**Dovecot** est un logiciel serveur de messagerie open source conçu pour gérer l'accès aux boîtes aux lettres des utilisateurs sur un serveur. Il est couramment utilisé en conjonction avec d'autres logiciels de messagerie tels que **Postfix** pour offrir une solution de messagerie complète sur les systèmes Linux et Unix-like. Il prend en charge les protocoles **IMAP** (**Internet Message Access Protocol**) et **POP3** (**Post Office Protocol version 3**), permettant aux utilisateurs d'accéder à leurs **e-mails** à partir de clients de messagerie tels que **Thunderbird**, **Outlook**, ou **Mail**.
 
 - Installation
 
