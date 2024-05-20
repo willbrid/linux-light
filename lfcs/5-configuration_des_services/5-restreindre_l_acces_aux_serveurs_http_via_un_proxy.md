@@ -10,7 +10,7 @@ Les entrées du fichier de configuration **Squid**
 - **http_access** : accorder (**allow**) ou refuser (**deny**) les ACL basées sur l'accès
 - **http_port** : port d'écoute de **Squid**
 - **core_dump** : répertoire où sont stockés les fichiers **core dump**
-- **rafraîchir_pattern** : valeurs utilisées pour déterminer si un objet mis en cache est obsolète et doit être actualisé
+- **refresh_pattern** : valeurs utilisées pour déterminer si un objet mis en cache est obsolète et doit être actualisé
 
 ### Installation de Squid
 
@@ -59,7 +59,7 @@ sudo firewall-cmd --add-service=squid
 sudo firewall-cmd --runtime-to-permanent
 ```
 
-- **request_header_access Referer deny all** : cette configuration empêche le serveur proxy de transmettre l'en-tête **"Referer"** dans les requêtes HTTP des clients. L'en-tête **"Referer"** contient généralement l'URL de la page précédente à partir de laquelle le client a navigué. En le déniant, nous masquant cette information des serveurs distants auxquels le proxy accède.
+- **request_header_access Referer deny all** : cette configuration empêche le serveur proxy de transmettre l'en-tête **"Referer"** dans les requêtes HTTP des clients. L'en-tête **"Referer"** contient généralement l'URL de la page précédente à partir de laquelle le client a navigué. En le déniant, nous masquons cette information des serveurs distants auxquels le proxy accède.
 
 - **request_header_access X-Forwarded-For deny all** : L'en-tête **"X-Forwarded-For"** est généralement ajouté par les proxies pour indiquer l'adresse IP du client d'origine. En déniant cet en-tête, nous empêchons le serveur proxy Squid de transmettre cette information au serveur final. Cela peut être utile pour des raisons de confidentialité ou de sécurité.
 
