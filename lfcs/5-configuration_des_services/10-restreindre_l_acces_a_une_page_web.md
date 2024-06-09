@@ -4,16 +4,16 @@ La gestion des serveurs Web est une compétence importante, mais en tant qu'admi
 
 ### Détails de configuration d'Apache2
 
---- Les restrictions d'accès sont placées dans le fichier **apache2.conf** (Ubuntu) ou **httpd.conf** (Rocky Linux) <br>
+--- Les restrictions d'accès sont placées dans le fichier **apache2.conf** (**Ubuntu**) ou **httpd.conf** (**Rocky Linux**) <br>
 --- Les récommandations de configuration <br>
 ----- faire toujours une copie de sauvegarde du fichier de configuration avant d'apporter des modifications <br>
 ----- utiliser la commande **apachectl configtest** pour valider les fichiers de configuration avant de redémarrer les services Apache2
 
 ### Configuration d'un bloc virtualhost sur nos 2 serveurs **ubuntu-server** et **rocky-server**
 
-Sous Ubuntu, nous considérons le bloc **virtualhost** par défaut dans le fichier **/etc/apache2/sites-available/000-default.conf**.
+Sous **Ubuntu**, nous considérons le bloc **virtualhost** par défaut dans le fichier **/etc/apache2/sites-available/000-default.conf**.
 
-Sous Rocky, nous configurons un bloc **virtualhost** et une page par défaut dans le fichier **/var/www/html/index.html**.
+Sous **Rocky**, nous configurons un bloc **virtualhost** et une page par défaut dans le fichier **/var/www/html/index.html**.
 
 ```
 sudo vi /etc/httpd/conf.d/default.conf
@@ -86,7 +86,7 @@ lynx 192.168.56.111/test
 
 ### Configurons une restriction pour autoriser l'accès à notre page **test** uniquement pour l'adresse locale de nos serveurs
 
-Sous Ubuntu
+Sous **Ubuntu**
 
 ```
 sudo vi /etc/apache2/sites-available/000-default.conf
@@ -107,7 +107,7 @@ sudo systemctl restart apache2
 sudo systemctl status apache2
 ```
 
-Sous Rocky linux
+Sous **Rocky linux**
 
 ```
 sudo vi /etc/httpd/conf.d/default.conf
