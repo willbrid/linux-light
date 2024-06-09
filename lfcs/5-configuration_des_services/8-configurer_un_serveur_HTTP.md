@@ -4,13 +4,13 @@ Les compétences nécessaires pour installer et configurer des services Web sur 
 
 - Installation d'**apache2**
 
-Sous Ubuntu
+Sous **Ubuntu**
 
 ```
 sudo apt install -y apache2
 ```
 
-Sous Rocky linux
+Sous **Rocky linux**
 
 ```
 sudo dnf install -y httpd
@@ -18,19 +18,19 @@ sudo dnf install -y httpd
 
 - Vérifions le statut du service apache2
 
-Sur Ubuntu
+Sur **Ubuntu**
 
 ```
 sudo systemctl status apache2
 ```
 
-Sous Rocky linux
+Sous **Rocky linux**
 
 ```
 sudo systemctl status httpd
 ```
 
-Sur Rocky linux, le service apache2 (httpd) n'est pas activé par défaut. Nous pouvons l'activer avec la commande
+Sur **Rocky linux**, le service apache2 (httpd) n'est pas activé par défaut. Nous pouvons l'activer avec la commande
 
 ```
 sudo systemctl enable --now httpd
@@ -40,13 +40,13 @@ sudo systemctl enable --now httpd
 
 --- Installons **lynx**
 
-Sous Ubuntu
+Sous **Ubuntu**
 
 ```
 sudo apt install -y lynx
 ```
 
-Sous Rocky linux
+Sous **Rocky linux**
 
 ```
 sudo dnf config-manager --set-enabled powertools
@@ -61,7 +61,7 @@ lynx localhost
 
 - Fichiers clés, répertoires et commandes
 
-Sous ubuntu
+Sous **ubuntu**
 
 --- **/var/www/html** : le répertoire "home" du site par défaut <br>
 --- **/etc/apache2** : le répertoire de l'application **apache2**, contient tous les répertoires et fichiers de configuration <br>
@@ -69,7 +69,7 @@ Sous ubuntu
 --- **/etc/apache2/sites-enabled/** : le répertoire qui contient les fichiers de configuration de tous les sites Web activés. Il contient des liens symboliques vers les fichiers **conf** dans le répertoire **sites-available** <br>
 --- **apachectl configtest** : commande qui validera le fichier de configuration
 
-Sous Rocky linux
+Sous **Rocky linux**
 
 --- **conf** : ce répertoire contient les fichiers de configuration principaux d'apache2 <br>
 ----- **httpd.conf** : le fichier de configuration principal d'apache où nous configurons des paramètres tels que les ports d'écoute, les hôtes virtuels, les modules chargés, etc. <br>
