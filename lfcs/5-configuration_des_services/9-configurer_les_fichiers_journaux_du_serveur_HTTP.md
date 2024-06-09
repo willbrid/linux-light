@@ -2,10 +2,10 @@
 
 Être capable de manipuler le format d'un fichier journal **Apache2** peut rendre la création de rapports et la gestion des journaux beaucoup plus facile pour un administrateur système Linux. De nombreux administrateurs système Linux utilisent un logiciel d'agrégation de journaux ou un logiciel d'analyse similaire pour consolider et gérer les fonctions de reporting.
 
-- Détails du fichier journal Apache2
+#### Détails du fichier journal Apache2
 
-Les formats de fichiers journaux sont stockés dans le fichier de configuration Apache2 ou HTTPD, en fonction de notre distribution. <br>
-Le formulaire **error.log** ne peut pas être modifié, uniquement le format **access.log**.
+Les formats de fichiers journaux sont stockés dans le fichier de configuration Apache2 ou Httpd, en fonction de notre distribution. <br>
+Le format **error.log** ne peut pas être modifié, uniquement le format **access.log**.
 
 Format de logs : <br>
 --- **%h** = Nom d'hôte (Adresse IP si la résolution de nom est désactivée) <br>
@@ -15,21 +15,21 @@ Format de logs : <br>
 --- **%>s** = Statut de la requête (200, 404, etc.) <br>
 --- **\"%{User-agent}i\"** = Navigateur utilisé pour effectuer la requête
 
-Sous Ubuntu
+Sous **Ubuntu**
 
 ```
 cat /etc/apache2/apache2.conf | grep LogFormat
 ```
 
-Sous Rocky linux
+Sous **Rocky linux**
 
 ```
 cat /etc/httpd/conf/httpd.conf | grep LogFormat
 ```
 
-- Configurer un format de logs personnalisé pour apache2
+#### Configurer un format de logs personnalisé pour apache2
 
-Sous Ubuntu
+Sous **Ubuntu**
 
 ```
 sudo vi /etc/apache2/apache2.conf
@@ -68,9 +68,9 @@ sudo systemctl restart httpd
 sudo systemctl status httpd
 ```
 
-- Appliquer un format de logs personnalisé à la configuration du site par défaut
+#### Appliquer un format de logs personnalisé à la configuration du site par défaut
 
-Sous Ubuntu
+Sous **Ubuntu**
 
 ```
 sudo vi /etc/apache2/sites-available/000-default.conf
@@ -95,7 +95,7 @@ sudo systemctl restart apache2
 sudo systemctl status apache2
 ```
 
-Sous Rocky linux
+Sous **Rocky linux**
 
 ```
 sudo vi /etc/httpd/conf/httpd.conf
