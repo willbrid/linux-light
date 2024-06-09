@@ -5,7 +5,7 @@ Les conteneurs permettent à un administrateur système Linux de collecter une a
 
 ### Installation de docker sur notre serveur ubuntu-server et podman sur notre serveur rocky-server
 
-Sous Ubuntu
+Sous **Ubuntu**
 
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -15,7 +15,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
 
-Sous Rocky
+Sous **Rocky**
 
 ```
 sudo dnf -y install podman
@@ -25,13 +25,13 @@ sudo dnf -y install podman
 
 - Listons les conteneurs actifs
 
-Sous ubuntu
+Sous **Ubuntu**
 
 ```
 sudo docker container ps
 ```
 
-Sous Rocky linux
+Sous **Rocky**
 
 ```
 sudo podman container ps
@@ -57,13 +57,13 @@ Container Page
 </html>
 ```
 
-Sous ubuntu
+Sous **Ubuntu**
 
 ```
 sudo docker container run -itd --name test-web -p 8080:80 -v /home/vagrant/html/:/usr/local/apache2/htdocs/ httpd
 ```
 
-Sous Rocky linux
+Sous **Rocky**
 
 ```
 sudo podman container run -itd --name test-web -p 8080:80 -v /home/vagrant/html/:/usr/local/apache2/htdocs/:z httpd
@@ -71,13 +71,13 @@ sudo podman container run -itd --name test-web -p 8080:80 -v /home/vagrant/html/
 
 Vérifions si le conteneur **test-web** a bien démarré
 
-Sous ubuntu
+Sous **Ubuntu**
 
 ```
 sudo docker container ps
 ```
 
-Sous Rocky linux
+Sous **Rocky**
 
 ```
 sudo podman container ps
@@ -91,7 +91,7 @@ lynx localhost:8080
 
 - Mettons à jour la page web du conteneur **test-web**
 
-Sous ubuntu
+Sous **Ubuntu**
 
 ```
 sudo docker container stop test-web
@@ -105,7 +105,7 @@ echo "New Page" > /home/vagrant/html/index.html
 sudo docker container start test-web
 ```
 
-Sous Rocky linux
+Sous **Rocky**
 
 ```
 sudo podman container stop test-web
@@ -121,7 +121,7 @@ sudo podman container start test-web
 
 - Arrêtons et supprimons le conteneur **test-web**
 
-Sous ubuntu
+Sous **Ubuntu**
 
 ```
 sudo docker container stop test-web
@@ -131,7 +131,7 @@ sudo docker container stop test-web
 sudo docker container rm test-web
 ```
 
-Sous Rocky linux
+Sous **Rocky**
 
 ```
 sudo podman container stop test-web
@@ -143,13 +143,13 @@ sudo podman container rm test-web
 
 - Affichons les images téléchargées en local
 
-Sous ubuntu
+Sous **Ubuntu**
 
 ```
 sudo docker image list
 ```
 
-Sous Rocky linux
+Sous **Rocky**
 
 ```
 sudo podman image list
@@ -157,13 +157,13 @@ sudo podman image list
 
 - Supprimons l'image **httpd** préalablement téléchargée
 
-Sous ubuntu
+Sous **Ubuntu**
 
 ```
 sudo docker image rm httpd
 ```
 
-Sous Rocky linux
+Sous **Rocky**
 
 ```
 sudo podman image rm httpd
