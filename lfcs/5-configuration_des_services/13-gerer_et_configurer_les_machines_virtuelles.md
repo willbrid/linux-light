@@ -24,13 +24,13 @@ wget https://dl-cdn.alpinelinux.org/alpine/v3.10/releases/x86/alpine-standard-3.
 
 ### Installation de KVM (Kernel-based Virtual Machine) + QEMU
 
-Sous Ubuntu
+Sous **Ubuntu**
 
 ```
 sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-daemon virtinst bridge-utils libosinfo-bin libguestfs-tools virt-top virt-manager virt-viewer
 ```
 
-Sous Rocky
+Sous **Rocky**
 
 ```
 sudo dnf install -y qemu-kvm libvirt virt-install virt-manager virt-viewer
