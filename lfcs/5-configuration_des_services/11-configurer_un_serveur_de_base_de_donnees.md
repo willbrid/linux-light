@@ -1,6 +1,6 @@
 # Configurer un serveur de base de données
 
-Les bases de données constituent une partie importante de nombreuses applications prises en charge par un administrateur système Linux. Nous devons donc savoir comment gérer diverses bases de données. Linux propose de nombreuses options de base de données, comme Oracle, PostgreSQL et Mongo. <br>
+Les bases de données constituent une partie importante de nombreuses applications prises en charge par un administrateur système Linux. Nous devons donc savoir comment gérer diverses bases de données. Linux propose de nombreuses options de base de données, comme **MariaDB**, **Oracle**, **PostgreSQL** et **Mongo**. <br>
 Nous prenons le cas de la mise en place d'un SGDB : **MariaDB**.
 
 ### Installation du serveur MariaDB et son client 
@@ -13,13 +13,13 @@ curl -LsS https://r.mariadb.com/downloads/mariadb_repo_setup | sudo bash -s -- -
 
 - Installons la version 10.11 LTS de Mariadb
 
-Sous Ubuntu
+Sous **Ubuntu**
 
 ```
 sudo apt update && sudo apt -y install mariadb-server mariadb-client
 ```
 
-Sous Rocky linux
+Sous **Rocky linux**
 
 ```
 sudo dnf install -y MariaDB-server MariaDB-client
@@ -42,7 +42,7 @@ sudo systemctl enable --now mariadb
 sudo systemctl status mariadb
 ```
 
-Sous Rocky linux, autorisons le port 3306
+Sous **Rocky linux**, autorisons le port 3306
 
 ```
 sudo firewall-cmd --permanent --add-port=3306/tcp
