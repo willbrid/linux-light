@@ -70,6 +70,18 @@ sudo parted /dev/sdb
 - Nous saisissons à nouveau la commande **print** de **parted** pour afficher les partitions et voir la 2ème partition recréée
 - Nous saisissons la commande **quit** de **parted** pour quitter l'invite **parted**
 
+Au niveau de la première commande (**print**), si nous rencontrons une erreur
+
+```
+Error: Unable to open /dev/sdb - unrecognized disk label
+```
+
+alors nous devons créer une nouvelle étiquette de disque de type **gpt** avec la commande **mklabel** de **parted**
+
+```
+mklabel gpt
+```
+
 - Nous pouvons redimensionner la taille d'une partition (par exemple celui de la 2ème partition)
 
 ```
