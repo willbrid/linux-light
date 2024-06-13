@@ -20,7 +20,7 @@ Utilitaire utilisé pour gérer les partitions de disque. Limite de taille de pa
 sudo fdisk /dev/sdb
 ```
 
---- Nous saisissons la lettre **'g'** pour créer une nouvelle partition GPT vide et attribue une nouvelle étiquette de disque <br>
+--- Nous saisissons la lettre **'g'** pour créer une nouvelle table de partition GPT vide et attribuer une nouvelle étiquette de disque <br>
 --- Nous saisissons la lettre **'n'** pour créer une nouvelle partition <br>
 --- Nous validons pour accepter la valeur par défaut (**'1'**) du numéro de la partition <br>
 --- Nous validons pour accepter la valeur par défaut de la taille du premier secteur de disque <br>
@@ -46,7 +46,7 @@ sudo fdisk /dev/sdb
 --- Nous saisissons la lettre **'p'** pour voir les modifications apportées <br>
 --- Nous saisissons la lettre **'w'** pour enregistrer tous les changements effectués <br>
 
-Nous pouvons vérifier que les nouvelles partitions ont créées sur le périphérique **/dev/sdb**
+Nous pouvons vérifier que la partition **2** a été supprimée sur le périphérique **/dev/sdb**
 
 ```
 lsblk
