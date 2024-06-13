@@ -55,6 +55,12 @@ Nous pouvons à nouveau lister les volumes physiques et constater que le champ *
 sudo pvdisplay
 ```
 
+Nous pouvons aussi afficher les volumes de groupe
+
+```
+sudo vgdisplay
+```
+
 - Créer un (ou plusieurs) volume logiques à partir d'un groupe de volume physique (**VG : vg01**)
 
 ```
