@@ -20,7 +20,7 @@ sudo pvcreate /dev/sdc3
 sudo pvs
 ```
 
-Nous pouvons constater que pour l'instant, le volume physique **/dev/sdc3** n'est attribué à aucun groupe de volume.
+Pour l'instant, nous pouvons constater que le volume physique **/dev/sdc3** n'est attribué à aucun groupe de volume.
 
 - Lister les groupes de volumes
 
@@ -82,7 +82,7 @@ Nous appliquons l'extension proprement dit
 sudo resize2fs /dev/vg01/lv01
 ```
 
-**NB :** Si le volume était préablement monté alors il faudrait d'abord le démonter avant d'appliquer la commande **resize2fs**.
+**NB:** Si le volume était préablement monté alors il faudrait d'abord le démonter avant d'appliquer la commande **resize2fs**.
 
 Nous pouvons vérifier notre point de montage **/mnt/data**
 
