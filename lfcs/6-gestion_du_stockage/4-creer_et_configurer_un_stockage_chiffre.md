@@ -84,15 +84,14 @@ sudo -i
 ```
 
 ```
-cd /mnt
-```
-
-```
-echo "I am an encrypted file !" > encrypted/secretfile.txt
+echo "I am an encrypted file !" > /mnt/encrypted/secretfile.txt
 ```
 
 ```
 cat encrypted/secretfile.txt
+```
+
+```
 exit
 ```
 
