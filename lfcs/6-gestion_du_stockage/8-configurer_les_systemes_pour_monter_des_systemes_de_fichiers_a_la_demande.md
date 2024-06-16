@@ -94,6 +94,12 @@ sudo testparm -s /etc/samba/smb.conf
 
 Activons le service samba
 
+Sous Ubuntu
+```
+sudo systemctl enable --now smbd
+```
+
+Sous Rocky
 ```
 sudo systemctl enable --now smb
 ```
