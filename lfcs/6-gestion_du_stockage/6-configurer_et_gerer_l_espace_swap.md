@@ -22,7 +22,7 @@ Parfois, un système peut manquer de mémoire. Un administrateur système Linux 
 cat /etc/fstab | grep swap
 ```
 
-- Afficher un tableau définissable des zones de swap
+- Afficher un tableau définissant les zones de swap
 
 ```
 swapon --show
