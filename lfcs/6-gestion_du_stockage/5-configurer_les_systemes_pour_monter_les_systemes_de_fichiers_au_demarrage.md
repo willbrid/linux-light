@@ -15,7 +15,7 @@ La table **fstab** est une structure à 6 colonnes, où chaque colonne désigne 
 - **opération de sauvegarde** : il est utilisé par l'utilitaire de **dump** pour décider quand effectuer une sauvegarde. Une fois installé, **dump** vérifie l'entrée et utilise le numéro pour décider si un système de fichiers doit être sauvegardé. Les entrées possibles sont **0** et **1**. Si **0**, dump ignorera le système de fichiers, si **1**, dump effectuera une sauvegarde.
 - **ordre de vérification du système de fichiers** : **fsck** lit le numéro d'**ordre de vérification** et détermine dans quel ordre les systèmes de fichiers doivent être vérifiés. Les entrées possibles sont **0**, **1** et **2**. Le système de fichiers racine doit avoir la priorité la plus élevée : **1**. Tous les autres systèmes de fichiers que nous souhaitons vérifier doivent avoir un **2**. Les systèmes de fichiers avec une valeur d'**ordre** **0** ne seront pas vérifiés par l'utilitaire **fsck**.
 
-Certaines des options de la table **fstab** les plus courantes sont :
+Certaines des **options** de la table **fstab** les plus courantes sont :
 
 - **auto** : le système de fichiers sera monté automatiquement au démarrage ou lorsque la commande **'mount -a'** est émise.
 - **noauto** : le système de fichiers est monté uniquement lorsque nous le lui demandons.
@@ -29,7 +29,7 @@ Certaines des options de la table **fstab** les plus courantes sont :
 - **user** : autorise n'importe quel utilisateur à monter le système de fichiers (implique **noexec**, **nosuid**, **nodev** sauf remplacement).
 - **nouser** : autorise uniquement root à monter le système de fichiers (par défaut).
 - **defaults** : paramètres de montage par défaut (équivalents à **rw,suid,dev,exec,auto,nouser,async**).
-- **suid** : autorise le fonctionnement des bits **suid** et **sgid**. Ils sont principalement utilisés pour permettre aux utilisateurs d'un système informatique d'exécuter des exécutables binaires avec des privilèges temporairement élevés afin d'effectuer une tâche spécifique.
+- **suid** : autorise le fonctionnement des bits **suid** et **sgid**. Ils sont principalement utilisés pour permettre aux utilisateurs d'un système d'exécuter des exécutables binaires avec des privilèges temporairement élevés afin d'effectuer une tâche spécifique.
 - **nosuid** : bloque le fonctionnement des bits **suid** et **sgid**.
 - **noatime** : ne met pas à jour les temps d'accès aux inodes sur le système de fichiers. Peut aider à la performance.
 
