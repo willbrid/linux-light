@@ -70,7 +70,7 @@ Pour rechercher plusieurs types à la fois, nous pouvons fournir la liste combin
 sudo find /etc -type f -user username
 ```
 
-**username** est le nom d'utilisateur avec lequel on est connecté sur le système.
+**username** est le nom d'utilisateur créé sur le système.
 
 - **Rechercher et lister un repertoire**
 
