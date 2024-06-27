@@ -105,7 +105,7 @@ find /opt/app -name "f*" -ok chmod 660 {} \;
 
 Nous tapons simplement **y** pour chaque invite **yes/no**.
 
-Modifions les autorisations sur tout ce qui ne commence pas par **f** (le répertoire lui-même et le script **test.sh**)
+Modifions les autorisations pour **rwxrwx---**, ou **770** sur tout ce qui ne commence pas par **f** (le répertoire lui-même et le script **test.sh**)
 
 ```
 find /opt/app '!' -name "f*" -ok chmod 770 {} \;
