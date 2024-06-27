@@ -58,9 +58,9 @@ Les types de fichiers sont : <br>
 --- **d** -> répertoire <br>
 --- **p** -> tube nommé (FIFO) <br>
 --- **f** -> fichier régulier <br>
---- **l** -> lien symbolique : ceci n'est jamais vrai si l'option **-L** ou l'option **-follow** est active, sauf si le lien symbolique est rompu. Si nous souhaitons rechercher des liens symboliques lorsque **-L** est activé, utiliseons **-xtype**. <br>
+--- **l** -> lien symbolique : ceci n'est jamais vrai si l'option **-L** ou l'option **-follow** est active, sauf si le lien symbolique est rompu. Si nous souhaitons rechercher des liens symboliques lorsque **-L** est activé, utilisons **-xtype**. <br>
 --- **s** -> socket <br>
---- **D** -> door (Solaris) <br>
+--- **D** -> door (Solaris)
 
 Pour rechercher plusieurs types à la fois, nous pouvons fournir la liste combinée des lettres de type séparées par une virgule ',' (extension GNU).
 
