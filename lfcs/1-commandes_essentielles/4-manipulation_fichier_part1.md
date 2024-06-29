@@ -13,7 +13,7 @@ cat filename.txt
 - Utilitaires Linux similaires, utilisés pour contrôler l'affichage du contenu des fichiers
 - Peut être utilisé sur un fichier directement ou sur la sortie d'une autre commande
 
-**more** est un filtre pour parcourir le texte un écran à la fois.
+**more** est un filtre pour parcourir le texte un **écran à la fois**.
 
 ```
 more filename.txt
@@ -23,7 +23,7 @@ more filename.txt
 cat filename.txt | more
 ```
 
-**Less** est un programme similaire à **more**, mais il a beaucoup plus de fonctionnalités. **Less** n'a pas besoin de lire l'intégralité du fichier d'entrée avant de démarrer, donc avec des fichiers d'entrée volumineux, il démarre plus rapidement que les éditeurs de texte comme vi.
+**Less** est un programme similaire à **more**, mais il a beaucoup plus de fonctionnalités. **Less** n'a pas besoin de lire l'intégralité du fichier d'entrée avant de démarrer, donc avec des fichiers d'entrée volumineux, il démarre plus rapidement que les éditeurs de texte comme **vi**.
 
 ```
 less filename.txt
@@ -43,7 +43,7 @@ cat filename.txt | less
 
 Une fois le fichier ouvert, nous pouvons utiliser la syntaxe **/pattern** pour rechercher vers l'avant dans le fichier la **N-ième** ligne contenant le **pattern**. **N** est par défaut égal à 1. Le **pattern** est une expression régulière, telle qu'elle est reconnue par la bibliothèque d'expressions régulières fournie par notre système. La recherche commence à la première ligne affichée (mais les options **-a** et **-j** peuvent changer cela). <br>
 L'option **-N** permet d'afficher les numéros de lignes du fichier. <br>
-L'option **+F** permet suivre les nouvelles lignes du fichier en realtime.
+L'option **+F** permet suivre les nouvelles lignes du fichier en **realtime**.
 
 **sort** : permet de trier les lignes des fichiers texte.
 
