@@ -4,13 +4,13 @@
 
 - Compare deux fichiers ou répertoires ligne par ligne
 - Plusieurs options pour ignorer, filtrer la comparaison
-- La sortie peut être affichée au format **ed**, en **mode contextuel**, ou format **unifié**
+- La sortie peut être affichée au format **ed**, en **mode contextuel**, ou au format **unifié**
 
 ```
 diff filename1.csv filename2.csv
 ```
 
-Au format ed (format par défaut), supposons que nous avons le résultat suivant :
+Au format **ed** (format par défaut), supposons que nous avons le résultat suivant :
 
 ```
 26c26
@@ -33,15 +33,15 @@ La sortie par défaut de la commande **diff** est au format **ed**.
 - Au niveau de la cinquième ligne qui est **87a88**. La valeur **87** indique la ligne **87** du premier fichier. Le **a** signifie **ajouter** et la valeur **88** indique la ligne **88** dans le deuxième fichier. 
 - La sixième ligne suivante **"> Nolan Ryan,8"** indique qu’il s’agit de la valeur du deuxième fichier. 
 - Donc, cette action **87a88** signifie qu'après la ligne **87** du premier fichier, nous devons ajouter la ligne **88** du deuxième fichier. 
-- La septième ligne est **121d121**. Le premier **121** indique la ligne **121** du premier fichier. Le **d** signifie **supprimer**. Le deuxième **121** indique la ligne **121** dans le deuxième fichier. Donc, ce que cette action nous dit de faire, c'est que nous devons supprimer la ligne **121** du premier fichier afin de faire correspondre la ligne 121 du deuxième fichier. La ligne **"< Tony Perez,7"** est la ligne du premier fichier que nous devons supprimer.
+- La septième ligne est **121d121**. Le premier **121** indique la ligne **121** du premier fichier. Le **d** signifie **supprimer**. Le deuxième **121** indique la ligne **121** dans le deuxième fichier. Donc, si nous revenons à la première ligne, **121d121**, cela signifie que nous devons supprimer la ligne **121** du premier fichier afin de faire correspondre à la ligne 121 du deuxième fichier. La ligne **"< Tony Perez,7"** est la ligne du premier fichier que nous devons supprimer.
 
 ```
 diff -c filename1.csv filename2.csv
 ```
 
-L'option **-c** permet d'activer l'affichage en mode contextuel.
+L'option **-c** permet d'activer l'affichage en mode **contextuel**.
 
-En mode contextuel, supposons que nous avons le résultat suivant :
+En mode **contextuel**, supposons que nous avons le résultat suivant :
 
 ```
 *** filename1.csv	2023-02-08 07:51:11.628970643 +0100
