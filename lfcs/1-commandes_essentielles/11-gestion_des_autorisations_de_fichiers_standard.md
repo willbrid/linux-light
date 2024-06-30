@@ -16,14 +16,16 @@ Nous pouvons afficher les informations d'autorisation et de propriété à l'aid
 drwxr-xr-x 5 linux linux 4096 Oct 4 14:06 Documents
 ```
 
-- La première partie de la première colonne peut avoir 3 valeurs. Le premier est un **-** qui indique qu'il s'agit d'un fichier. La deuxième valeur est un **d**, qui indique un répertoire. Et la troisième valeur est un **l**, qui indique un lien.
+- La première partie de la première colonne peut avoir 3 valeurs :
+
+--- le premier est un **-** qui indique qu'il s'agit d'un fichier <br>
+--- la deuxième valeur est un **d**, qui indique un répertoire <br>
+--- et la troisième valeur est un **l**, qui indique un lien 
 
 - La partie suivante de la première colonne concerne les autorisations réelles des fichiers. Ceux-ci sont affichés sous forme de 3 groupes de 3 lettres :
 
 --- Le premier groupe de 3 lettres est destiné à l'utilisateur ou au propriétaire du fichier. <br>
-
 --- Le deuxième groupe de 3 lettres est destiné au groupe. <br>
-
 --- Et la troisième série de 3 lettres est destinée à tous les autres utilisateurs.
 
 Nous pouvons utiliser le processus symbolique ou le processus octal. La lettre **r** signifie **lire**, la lettre **w** signifie **écrire** et la lettre **x** signifie **exécuter**. En valeurs octales, la **valeur de lecture** est un **4**, la **valeur d’écriture** est un **2** et la **valeur d’exécution** est un **1**.
