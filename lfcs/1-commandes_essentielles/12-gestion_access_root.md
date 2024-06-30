@@ -79,7 +79,7 @@ Sous Ubuntu
 %sudo	ALL=(ALL:ALL) ALL
 ```
 
-Créons un utilisateur **basicuser** avec un mot de passe **test**
+Créons un utilisateur **basicuser** avec un mot de passe **test@test**
 
 Sous Ubuntu
 ```
@@ -159,7 +159,7 @@ Déconnectons nous de la session de l'utilisateur **basicuser**
 exit
 ```
 
-Créons un autre utilisateur **newuser** avec un mot de passe **test**
+Créons un autre utilisateur **newuser** avec un mot de passe **test@test**
 
 Sous Ubuntu
 ```
