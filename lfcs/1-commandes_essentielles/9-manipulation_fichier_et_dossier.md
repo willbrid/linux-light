@@ -159,4 +159,4 @@ Nous pouvons utiliser la commande **rsync** pour vérifier que le **contenu**, l
 rsync -naP /opt/app/ vagrant@192.168.56.111:/opt/api/app/
 ```
 
-L'option **-n** permet d'effectuer un **dry-run** sans aucune modification, l'option **-a** permet d'activer le mode **archive** et l'option **-P** est équivalent aux options combinées **--partial --progress** qui permettent de conserver les fichiers partiellement transférés (**--partial**) et d'afficher la progression pendant le transfert (**--progress**).
+L'option **-n** (**--dry-run**) permet d'effectuer un **dry-run** sans aucune modification, l'option **-a** permet d'activer le mode **archive** et l'option **-P** est équivalent aux options combinées **--partial --progress** qui permettent de conserver les fichiers partiellement transférés (**--partial**) et d'afficher la progression pendant le transfert (**--progress**).
