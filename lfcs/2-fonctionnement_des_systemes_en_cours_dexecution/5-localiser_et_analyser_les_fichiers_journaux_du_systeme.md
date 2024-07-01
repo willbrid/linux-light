@@ -7,7 +7,7 @@ En tant qu'administrateur système, il peut nous être demandé de surveiller de
 ### Systèmes basés sur Debian/Ubuntu
 
 - **syslog** - Informations système
-- **auth.log** - Informations d'authentification du compte
+- **auth.log** - Informations d'authentification des comptes
 
 ```
 cat /etc/os-release
@@ -34,7 +34,7 @@ sudo less /var/log/syslog | grep apparmor
 ### Systèmes basés sur RedHat/CentOS
 
 - **messages** - Informations système
-- **secure** - Informations d'authentification du compte
+- **secure** - Informations d'authentification des comptes
 
 ```
 ls /var/log/
